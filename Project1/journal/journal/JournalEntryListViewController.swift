@@ -15,11 +15,12 @@ class JournalEntryListViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.refreshControl?.beginRefreshing()
+        tableView.reloadData()
     }
+    
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
         print("hello ive been called" )
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     @IBAction func cancelJournalEntry(_ segue: UIStoryboardSegue){
