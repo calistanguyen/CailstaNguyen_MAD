@@ -19,17 +19,17 @@ class CreateJournalEntryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func submitJournalEntry(_ sender: UIButton) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //https://cocoacasts.com/swift-fundamentals-how-to-convert-a-date-to-a-string-in-swift
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d, yyyy"
-
-        JournalEntry.journalEntries.add(JournalEntry(date: dateFormatter.string(from: journalEntryDatePicker.date), journalText: journalEntryTextField.text!))
-        
-        print(JournalEntry.journalEntries)
-        
-        
+        if segue.identifier == "submit"{
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM d, yyyy"
+            let scene1VC = segue.destination as! JournalEntryListViewController
+            scene1VC.journalEntry.date = dateFormatter.string(from: journalEntryDatePicker.date)
+            scene1VC.journalEntry.journalText = journalEntryTextField.text!
+        }
     }
     @IBAction func alertCancel(_ sender: UIButton) {
         //if journal entry text field is not empty, alert user asking if they want to cancel

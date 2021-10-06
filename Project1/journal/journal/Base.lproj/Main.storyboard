@@ -118,7 +118,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitJournalEntry:" destination="hQV-09-26o" eventType="touchUpInside" id="YJM-dU-QDW"/>
-                                    <segue destination="8gs-9f-QdH" kind="unwind" unwindAction="unwindSegue:" id="8Kr-n6-Qbd"/>
+                                    <segue destination="8gs-9f-QdH" kind="unwind" identifier="submit" unwindAction="unwindSegue:" id="8Kr-n6-Qbd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jm-Tv-DIs">

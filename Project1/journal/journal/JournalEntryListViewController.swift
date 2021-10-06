@@ -14,13 +14,12 @@ class JournalEntryListViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
-    }
+    var journalEntry = JournalEntry(date: "", journalText: "")
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
         print("hello ive been called" )
-//        tableView.reloadData()
+        JournalEntry.journalEntries.add(journalEntry)
+        tableView.reloadData()
     }
     
     @IBAction func cancelJournalEntry(_ segue: UIStoryboardSegue){
