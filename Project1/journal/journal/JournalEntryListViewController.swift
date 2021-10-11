@@ -17,13 +17,10 @@ class JournalEntryListViewController: UITableViewController {
     var journalEntry = JournalEntry(date: "", journalText: "")
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
-        print("hello ive been called" )
-        JournalEntry.journalEntries.add(journalEntry)
-        tableView.reloadData()
-    }
-    
-    @IBAction func cancelJournalEntry(_ segue: UIStoryboardSegue){
-        //include alert asking if user is sure they don't want to save journal entry if text field is not empty
+        if segue.identifier == "submit"{
+            JournalEntry.journalEntries.insert(journalEntry, at: 0)
+            tableView.reloadData()
+        }
     }
     
 

@@ -13,9 +13,6 @@ struct JournalEntry {
 }
 
 extension JournalEntry {
-    static var journalEntries: NSMutableArray = [
-    JournalEntry(date: "test", journalText: "test"),
-        JournalEntry(date:"test", journalText: "test")
-    ]
+    static var journalEntries: NSMutableArray = []
 }
 

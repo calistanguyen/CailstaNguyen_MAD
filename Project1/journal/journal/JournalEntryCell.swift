@@ -10,4 +10,5 @@ import UIKit
 class JournalEntryCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var journalText: UILabel!
+
 }
