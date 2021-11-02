@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">affirmations</string>
+    <string name="nameInputHint">Name</string>
+    <string name="buttonText">Receive Compliment</string>
+    <string name="compliment1">%1$s, you look good today!</string>
+    <string name="compliment2">%1$s, you\'re so cool!</string>
+</resources>
