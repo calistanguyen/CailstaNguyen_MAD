@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">pokemon</string>
+    <string name="water">water</string>
+    <string name="fire">fire</string>
+    <string name="grass">grass</string>
+    <string name="buttonText">get starter</string>
+    <string name="label1">choose a type</string>
+    <string name="label2">choose a region</string>
+    <string name="buttonLabel2">learn more</string>
+    <string name="you_got_chimchar">You got Chimchar!</string>
+    <string name="you_got_cyndaquil">You got Cyndaquil!</string>
+    <string name="you_got_piplup">You got Piplup!</string>
+    <string name="you_got_oshawott">You got Oshawott!</string>
+    <string name="you_got_turtwig">You got Turtwig!</string>
+    <string name="you_got_rowlett">You got Rowlet!</string>
+    <string-array name="regions">
+        <item>Sinnoh</item>
+        <item>Hisui</item>
+    </string-array>
+</resources>
