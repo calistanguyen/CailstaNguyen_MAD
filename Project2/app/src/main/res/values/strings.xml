@@ -3,7 +3,7 @@
     <string name="current_volume">Current Volume: </string>
     <string-array name="weight_units">
         <item>lbs</item>
-        <item>kg</item>
+        <item>kgs</item>
     </string-array>
     <string name="title_activity_add_workout">addWorkout</string>
     <!-- Strings used for fragments for navigation -->
@@ -18,5 +18,5 @@
     <string name="sets">sets</string>
     <string name="reps" >reps</string>
     <string name="pounds">lbs</string>
-    <string name="kilos">kg</string>
+    <string name="kilos">kgs</string>
 </resources>

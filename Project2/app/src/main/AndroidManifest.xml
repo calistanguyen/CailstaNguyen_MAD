@@ -13,10 +13,12 @@
             android:name=".addWorkout"
             android:exported="true"
             android:label="@string/title_activity_add_workout"
-            android:theme="@style/Theme.Exercise.NoActionBar" />
+            android:theme="@style/Theme.Exercise.NoActionBar"
+            android:configChanges="orientation|screenSize" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:configChanges="orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
