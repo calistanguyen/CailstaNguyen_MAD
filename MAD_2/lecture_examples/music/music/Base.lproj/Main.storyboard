@@ -56,7 +56,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-865" y="865"/>
+        </scene>
+        <!--third-->
+        <scene sceneID="0nn-nz-QwL">
+            <objects>
+                <viewController id="HEa-5q-aOk" customClass="ThirdViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kNb-Ny-L9O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="enb-xF-DVK">
+                                <rect key="frame" x="47" y="64" width="320" height="343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Picker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f26-N3-eJ0">
+                                        <rect key="frame" x="95" y="0.0" width="130" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhH-PD-O9I">
+                                        <rect key="frame" x="0.0" y="70" width="320" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="HEa-5q-aOk" id="FdU-Fl-TuO"/>
+                                            <outlet property="delegate" destination="HEa-5q-aOk" id="nLG-pf-ddI"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otc-4a-Vho">
+                                        <rect key="frame" x="142.5" y="326" width="35.5" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QBs-R2-aNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="enb-xF-DVK" firstAttribute="centerX" secondItem="kNb-Ny-L9O" secondAttribute="centerX" id="Czm-Bt-cZ9"/>
+                            <constraint firstItem="enb-xF-DVK" firstAttribute="top" secondItem="QBs-R2-aNs" secondAttribute="top" constant="20" id="KSw-ob-awV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="third" id="Jac-Hr-IRQ"/>
+                    <connections>
+                        <outlet property="artistPicker" destination="MhH-PD-O9I" id="Ra0-UK-7tL"/>
+                        <outlet property="choiceLabel" destination="otc-4a-Vho" id="JEt-pI-PWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLf-Jd-pFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="880.58035714285711"/>
+        </scene>
+        <!--Fourth-->
+        <scene sceneID="AZ2-7c-KbQ">
+            <objects>
+                <viewController id="szt-So-Wy5" customClass="FourthViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9k-4F-tYU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-24-fqi">
+                                <rect key="frame" x="175.5" y="432.5" width="63" height="31"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Listen"/>
+                                <connections>
+                                    <action selector="goToMusic:" destination="szt-So-Wy5" eventType="touchUpInside" id="a2y-sA-qJH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BMR-Wc-Mqe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pXf-24-fqi" firstAttribute="centerY" secondItem="y9k-4F-tYU" secondAttribute="centerY" id="O2E-UD-de6"/>
+                            <constraint firstItem="pXf-24-fqi" firstAttribute="centerX" secondItem="y9k-4F-tYU" secondAttribute="centerX" id="ZOl-oL-Q4O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fourth" id="Xsz-Wv-W5x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qow-97-AuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513.0434782608697" y="880.58035714285711"/>
         </scene>
         <!--Second-->
         <scene sceneID="mtl-JV-48s">
@@ -106,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gra-Wv-wI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671.01449275362324" y="864.50892857142856"/>
+            <point key="canvasLocation" x="-91" y="881"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EDg-dN-2hO">
@@ -114,22 +195,28 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vlf-G1-Bcn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="npm-jm-S0w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="A6o-2B-aMV"/>
                         <segue destination="9jR-4d-UGM" kind="relationship" relationship="viewControllers" id="9ga-74-tNR"/>
+                        <segue destination="HEa-5q-aOk" kind="relationship" relationship="viewControllers" id="skQ-I5-2EN"/>
+                        <segue destination="szt-So-Wy5" kind="relationship" relationship="viewControllers" id="8zr-Qc-hYJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llG-op-uRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-91" y="113"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

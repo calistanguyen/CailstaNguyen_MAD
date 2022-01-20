@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73798C052799C555008FE33C /* artistalbums2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73798C042799C554008FE33C /* artistalbums2.plist */; };
+		73798C072799C70B008FE33C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C062799C70B008FE33C /* ThirdViewController.swift */; };
+		73798C092799C881008FE33C /* ArtistAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C082799C881008FE33C /* ArtistAlbums.swift */; };
+		73798C0B2799CAB8008FE33C /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C0A2799CAB8008FE33C /* DataLoader.swift */; };
+		73798C0D2799D567008FE33C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C0C2799D567008FE33C /* FourthViewController.swift */; };
 		73E3FEE227908A1E00AE92A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE127908A1E00AE92A4 /* AppDelegate.swift */; };
 		73E3FEE427908A1E00AE92A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */; };
 		73E3FEE627908A1E00AE92A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE527908A1E00AE92A4 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73798C042799C554008FE33C /* artistalbums2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = artistalbums2.plist; sourceTree = "<group>"; };
+		73798C062799C70B008FE33C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		73798C082799C881008FE33C /* ArtistAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbums.swift; sourceTree = "<group>"; };
+		73798C0A2799CAB8008FE33C /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		73798C0C2799D567008FE33C /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		73E3FEDE27908A1E00AE92A4 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E3FEE127908A1E00AE92A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +72,15 @@
 				73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */,
 				73E3FEE527908A1E00AE92A4 /* ViewController.swift */,
 				73E3FEE727908A1E00AE92A4 /* Main.storyboard */,
+				73798C0C2799D567008FE33C /* FourthViewController.swift */,
+				73798C082799C881008FE33C /* ArtistAlbums.swift */,
+				73798C0A2799CAB8008FE33C /* DataLoader.swift */,
+				73798C062799C70B008FE33C /* ThirdViewController.swift */,
 				73E3FEF527908CBF00AE92A4 /* SecondViewController.swift */,
 				73E3FEEA27908A2000AE92A4 /* Assets.xcassets */,
 				73E3FEEC27908A2000AE92A4 /* LaunchScreen.storyboard */,
 				73E3FEEF27908A2000AE92A4 /* Info.plist */,
+				73798C042799C554008FE33C /* artistalbums2.plist */,
 			);
 			path = music;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 			files = (
 				73E3FEEE27908A2000AE92A4 /* LaunchScreen.storyboard in Resources */,
 				73E3FEEB27908A2000AE92A4 /* Assets.xcassets in Resources */,
+				73798C052799C555008FE33C /* artistalbums2.plist in Resources */,
 				73E3FEE927908A1E00AE92A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +159,10 @@
 			files = (
 				73E3FEF627908CBF00AE92A4 /* SecondViewController.swift in Sources */,
 				73E3FEE627908A1E00AE92A4 /* ViewController.swift in Sources */,
+				73798C0B2799CAB8008FE33C /* DataLoader.swift in Sources */,
+				73798C092799C881008FE33C /* ArtistAlbums.swift in Sources */,
+				73798C0D2799D567008FE33C /* FourthViewController.swift in Sources */,
+				73798C072799C70B008FE33C /* ThirdViewController.swift in Sources */,
 				73E3FEE227908A1E00AE92A4 /* AppDelegate.swift in Sources */,
 				73E3FEE427908A1E00AE92A4 /* SceneDelegate.swift in Sources */,
 			);
