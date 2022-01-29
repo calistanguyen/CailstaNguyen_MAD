@@ -7,135 +7,137 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73798C052799C555008FE33C /* artistalbums2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73798C042799C554008FE33C /* artistalbums2.plist */; };
-		73798C072799C70B008FE33C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C062799C70B008FE33C /* ThirdViewController.swift */; };
-		73798C092799C881008FE33C /* ArtistAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C082799C881008FE33C /* ArtistAlbums.swift */; };
-		73798C0B2799CAB8008FE33C /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C0A2799CAB8008FE33C /* DataLoader.swift */; };
-		73798C0D2799D567008FE33C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C0C2799D567008FE33C /* FourthViewController.swift */; };
-		73798C0F27A05C07008FE33C /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C0E27A05C07008FE33C /* FifthViewController.swift */; };
-		73798C1227A05E05008FE33C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73798C1127A05E05008FE33C /* AVFoundation.framework */; };
-		73E3FEE227908A1E00AE92A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE127908A1E00AE92A4 /* AppDelegate.swift */; };
-		73E3FEE427908A1E00AE92A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */; };
-		73E3FEE627908A1E00AE92A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEE527908A1E00AE92A4 /* ViewController.swift */; };
-		73E3FEE927908A1E00AE92A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E3FEE727908A1E00AE92A4 /* Main.storyboard */; };
-		73E3FEEB27908A2000AE92A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73E3FEEA27908A2000AE92A4 /* Assets.xcassets */; };
-		73E3FEEE27908A2000AE92A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E3FEEC27908A2000AE92A4 /* LaunchScreen.storyboard */; };
-		73E3FEF627908CBF00AE92A4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FEF527908CBF00AE92A4 /* SecondViewController.swift */; };
+		73798C4427A23E0B008FE33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C4327A23E0B008FE33C /* AppDelegate.swift */; };
+		73798C4627A23E0B008FE33C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C4527A23E0B008FE33C /* SceneDelegate.swift */; };
+		73798C4B27A23E0B008FE33C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73798C4927A23E0B008FE33C /* Main.storyboard */; };
+		73798C4D27A23E0D008FE33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73798C4C27A23E0D008FE33C /* Assets.xcassets */; };
+		73798C5027A23E0D008FE33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73798C4E27A23E0D008FE33C /* LaunchScreen.storyboard */; };
+		73798C5C27A2426C008FE33C /* menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73798C5B27A2426C008FE33C /* menu.plist */; };
+		73798C5E27A2441E008FE33C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73798C5D27A2441E008FE33C /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73798C042799C554008FE33C /* artistalbums2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = artistalbums2.plist; sourceTree = "<group>"; };
-		73798C062799C70B008FE33C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		73798C082799C881008FE33C /* ArtistAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbums.swift; sourceTree = "<group>"; };
-		73798C0A2799CAB8008FE33C /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		73798C0C2799D567008FE33C /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		73798C0E27A05C07008FE33C /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		73798C1127A05E05008FE33C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		73E3FEDE27908A1E00AE92A4 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		73E3FEE127908A1E00AE92A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73E3FEE527908A1E00AE92A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		73E3FEE827908A1E00AE92A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		73E3FEEA27908A2000AE92A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		73E3FEED27908A2000AE92A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		73E3FEEF27908A2000AE92A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73E3FEF527908CBF00AE92A4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		73798C4027A23E0B008FE33C /* Cafe Cali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe Cali.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73798C4327A23E0B008FE33C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73798C4527A23E0B008FE33C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		73798C4A27A23E0B008FE33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73798C4C27A23E0D008FE33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73798C4F27A23E0D008FE33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73798C5127A23E0D008FE33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73798C5B27A2426C008FE33C /* menu.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
+		73798C5D27A2441E008FE33C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		73E3FEDB27908A1E00AE92A4 /* Frameworks */ = {
+		73798C3D27A23E0B008FE33C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73798C1227A05E05008FE33C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73798C1027A05E05008FE33C /* Frameworks */ = {
+		73798C3727A23E0B008FE33C = {
 			isa = PBXGroup;
 			children = (
-				73798C1127A05E05008FE33C /* AVFoundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		73E3FED527908A1E00AE92A4 = {
-			isa = PBXGroup;
-			children = (
-				73E3FEE027908A1E00AE92A4 /* music */,
-				73E3FEDF27908A1E00AE92A4 /* Products */,
-				73798C1027A05E05008FE33C /* Frameworks */,
+				73798C4227A23E0B008FE33C /* Cafe Cali */,
+				73798C4127A23E0B008FE33C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		73E3FEDF27908A1E00AE92A4 /* Products */ = {
+		73798C4127A23E0B008FE33C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73E3FEDE27908A1E00AE92A4 /* music.app */,
+				73798C4027A23E0B008FE33C /* Cafe Cali.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		73E3FEE027908A1E00AE92A4 /* music */ = {
+		73798C4227A23E0B008FE33C /* Cafe Cali */ = {
 			isa = PBXGroup;
 			children = (
-				73E3FEE127908A1E00AE92A4 /* AppDelegate.swift */,
-				73E3FEE327908A1E00AE92A4 /* SceneDelegate.swift */,
-				73E3FEE527908A1E00AE92A4 /* ViewController.swift */,
-				73E3FEE727908A1E00AE92A4 /* Main.storyboard */,
-				73798C0E27A05C07008FE33C /* FifthViewController.swift */,
-				73798C0C2799D567008FE33C /* FourthViewController.swift */,
-				73798C082799C881008FE33C /* ArtistAlbums.swift */,
-				73798C0A2799CAB8008FE33C /* DataLoader.swift */,
-				73798C062799C70B008FE33C /* ThirdViewController.swift */,
-				73E3FEF527908CBF00AE92A4 /* SecondViewController.swift */,
-				73E3FEEA27908A2000AE92A4 /* Assets.xcassets */,
-				73E3FEEC27908A2000AE92A4 /* LaunchScreen.storyboard */,
-				73E3FEEF27908A2000AE92A4 /* Info.plist */,
-				73798C042799C554008FE33C /* artistalbums2.plist */,
+				73798C5A27A2423A008FE33C /* Data */,
+				73798C5927A240E3008FE33C /* Storyboards */,
+				73798C5827A24041008FE33C /* Delegates */,
+				73798C5727A24008008FE33C /* Controllers */,
+				73798C4C27A23E0D008FE33C /* Assets.xcassets */,
+				73798C5127A23E0D008FE33C /* Info.plist */,
 			);
-			path = music;
+			path = "Cafe Cali";
+			sourceTree = "<group>";
+		};
+		73798C5727A24008008FE33C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73798C5D27A2441E008FE33C /* MenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73798C5827A24041008FE33C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				73798C4327A23E0B008FE33C /* AppDelegate.swift */,
+				73798C4527A23E0B008FE33C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		73798C5927A240E3008FE33C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				73798C4927A23E0B008FE33C /* Main.storyboard */,
+				73798C4E27A23E0D008FE33C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		73798C5A27A2423A008FE33C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				73798C5B27A2426C008FE33C /* menu.plist */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		73E3FEDD27908A1E00AE92A4 /* music */ = {
+		73798C3F27A23E0B008FE33C /* Cafe Cali */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73E3FEF227908A2000AE92A4 /* Build configuration list for PBXNativeTarget "music" */;
+			buildConfigurationList = 73798C5427A23E0D008FE33C /* Build configuration list for PBXNativeTarget "Cafe Cali" */;
 			buildPhases = (
-				73E3FEDA27908A1E00AE92A4 /* Sources */,
-				73E3FEDB27908A1E00AE92A4 /* Frameworks */,
-				73E3FEDC27908A1E00AE92A4 /* Resources */,
+				73798C3C27A23E0B008FE33C /* Sources */,
+				73798C3D27A23E0B008FE33C /* Frameworks */,
+				73798C3E27A23E0B008FE33C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = music;
-			productName = music;
-			productReference = 73E3FEDE27908A1E00AE92A4 /* music.app */;
+			name = "Cafe Cali";
+			productName = "Cafe Cali";
+			productReference = 73798C4027A23E0B008FE33C /* Cafe Cali.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		73E3FED627908A1E00AE92A4 /* Project object */ = {
+		73798C3827A23E0B008FE33C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					73E3FEDD27908A1E00AE92A4 = {
+					73798C3F27A23E0B008FE33C = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 73E3FED927908A1E00AE92A4 /* Build configuration list for PBXProject "music" */;
+			buildConfigurationList = 73798C3B27A23E0B008FE33C /* Build configuration list for PBXProject "Cafe Cali" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,62 +145,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 73E3FED527908A1E00AE92A4;
-			productRefGroup = 73E3FEDF27908A1E00AE92A4 /* Products */;
+			mainGroup = 73798C3727A23E0B008FE33C;
+			productRefGroup = 73798C4127A23E0B008FE33C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73E3FEDD27908A1E00AE92A4 /* music */,
+				73798C3F27A23E0B008FE33C /* Cafe Cali */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		73E3FEDC27908A1E00AE92A4 /* Resources */ = {
+		73798C3E27A23E0B008FE33C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73E3FEEE27908A2000AE92A4 /* LaunchScreen.storyboard in Resources */,
-				73E3FEEB27908A2000AE92A4 /* Assets.xcassets in Resources */,
-				73798C052799C555008FE33C /* artistalbums2.plist in Resources */,
-				73E3FEE927908A1E00AE92A4 /* Main.storyboard in Resources */,
+				73798C5027A23E0D008FE33C /* LaunchScreen.storyboard in Resources */,
+				73798C5C27A2426C008FE33C /* menu.plist in Resources */,
+				73798C4D27A23E0D008FE33C /* Assets.xcassets in Resources */,
+				73798C4B27A23E0B008FE33C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		73E3FEDA27908A1E00AE92A4 /* Sources */ = {
+		73798C3C27A23E0B008FE33C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73798C0F27A05C07008FE33C /* FifthViewController.swift in Sources */,
-				73E3FEF627908CBF00AE92A4 /* SecondViewController.swift in Sources */,
-				73E3FEE627908A1E00AE92A4 /* ViewController.swift in Sources */,
-				73798C0B2799CAB8008FE33C /* DataLoader.swift in Sources */,
-				73798C092799C881008FE33C /* ArtistAlbums.swift in Sources */,
-				73798C0D2799D567008FE33C /* FourthViewController.swift in Sources */,
-				73798C072799C70B008FE33C /* ThirdViewController.swift in Sources */,
-				73E3FEE227908A1E00AE92A4 /* AppDelegate.swift in Sources */,
-				73E3FEE427908A1E00AE92A4 /* SceneDelegate.swift in Sources */,
+				73798C4427A23E0B008FE33C /* AppDelegate.swift in Sources */,
+				73798C5E27A2441E008FE33C /* MenuViewController.swift in Sources */,
+				73798C4627A23E0B008FE33C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		73E3FEE727908A1E00AE92A4 /* Main.storyboard */ = {
+		73798C4927A23E0B008FE33C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				73E3FEE827908A1E00AE92A4 /* Base */,
+				73798C4A27A23E0B008FE33C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		73E3FEEC27908A2000AE92A4 /* LaunchScreen.storyboard */ = {
+		73798C4E27A23E0D008FE33C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				73E3FEED27908A2000AE92A4 /* Base */,
+				73798C4F27A23E0D008FE33C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -206,7 +202,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		73E3FEF027908A2000AE92A4 /* Debug */ = {
+		73798C5227A23E0D008FE33C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,7 +263,7 @@
 			};
 			name = Debug;
 		};
-		73E3FEF127908A2000AE92A4 /* Release */ = {
+		73798C5327A23E0D008FE33C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,7 +318,7 @@
 			};
 			name = Release;
 		};
-		73E3FEF327908A2000AE92A4 /* Debug */ = {
+		73798C5527A23E0D008FE33C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -330,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = music/Info.plist;
+				INFOPLIST_FILE = "Cafe Cali/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -341,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.music;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.Cafe-Cali";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -349,7 +345,7 @@
 			};
 			name = Debug;
 		};
-		73E3FEF427908A2000AE92A4 /* Release */ = {
+		73798C5627A23E0D008FE33C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -357,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = music/Info.plist;
+				INFOPLIST_FILE = "Cafe Cali/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -368,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.music;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.Cafe-Cali";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -379,25 +375,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73E3FED927908A1E00AE92A4 /* Build configuration list for PBXProject "music" */ = {
+		73798C3B27A23E0B008FE33C /* Build configuration list for PBXProject "Cafe Cali" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73E3FEF027908A2000AE92A4 /* Debug */,
-				73E3FEF127908A2000AE92A4 /* Release */,
+				73798C5227A23E0D008FE33C /* Debug */,
+				73798C5327A23E0D008FE33C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73E3FEF227908A2000AE92A4 /* Build configuration list for PBXNativeTarget "music" */ = {
+		73798C5427A23E0D008FE33C /* Build configuration list for PBXNativeTarget "Cafe Cali" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73E3FEF327908A2000AE92A4 /* Debug */,
-				73E3FEF427908A2000AE92A4 /* Release */,
+				73798C5527A23E0D008FE33C /* Debug */,
+				73798C5627A23E0D008FE33C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 73E3FED627908A1E00AE92A4 /* Project object */;
+	rootObject = 73798C3827A23E0B008FE33C /* Project object */;
 }

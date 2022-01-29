@@ -8,7 +8,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Recorder-->
+        <scene sceneID="U92-L9-prm">
+            <objects>
+                <viewController id="qGN-vY-dxa" customClass="FifthViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zU1-h0-uth">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="bx2-FH-rlt">
+                                <rect key="frame" x="172" y="213" width="70" height="163"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJg-zW-b6Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="31"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Record"/>
+                                        <connections>
+                                            <action selector="recordAudio:" destination="qGN-vY-dxa" eventType="touchUpInside" id="VGV-gH-g2b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-wP-NYD">
+                                        <rect key="frame" x="0.0" y="66" width="70" height="31"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                        <connections>
+                                            <action selector="playAudio:" destination="qGN-vY-dxa" eventType="touchUpInside" id="s5x-ha-ZJh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qac-c9-JSZ">
+                                        <rect key="frame" x="0.0" y="132" width="70" height="31"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopAudio:" destination="qGN-vY-dxa" eventType="touchUpInside" id="kVe-Fq-axj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="KPu-HO-hdS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cw9-Ji-v9T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bx2-FH-rlt" firstAttribute="top" secondItem="cw9-Ji-v9T" secondAttribute="top" constant="169" id="5Au-pG-8YF"/>
+                            <constraint firstItem="bx2-FH-rlt" firstAttribute="centerX" secondItem="zU1-h0-uth" secondAttribute="centerX" id="83P-Uf-zth"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recorder" image="mic" catalog="system" id="WBH-dS-t5R"/>
+                    <connections>
+                        <outlet property="playButton" destination="cfP-wP-NYD" id="EbD-1f-MK8"/>
+                        <outlet property="recordButton" destination="VJg-zW-b6Q" id="zGz-Ns-cs1"/>
+                        <outlet property="stopButton" destination="Qac-c9-JSZ" id="o8S-Lz-Qtl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9o-I7-zml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="112.5"/>
+        </scene>
+        <!--Genre-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +110,7 @@
                             <constraint firstItem="QnV-cK-EcN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XYC-eG-Bc6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" id="QVo-Yu-s5T"/>
+                    <tabBarItem key="tabBarItem" title="Genre" image="music.note" catalog="system" id="QVo-Yu-s5T"/>
                     <connections>
                         <outlet property="choiceLabel" destination="lK2-O0-13H" id="jzF-eF-kxW"/>
                         <outlet property="musicPicker" destination="mvG-t7-tGD" id="UEj-Zx-PQb"/>
@@ -58,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="-865" y="865"/>
         </scene>
-        <!--third-->
+        <!--Artist-->
         <scene sceneID="0nn-nz-QwL">
             <objects>
                 <viewController id="HEa-5q-aOk" customClass="ThirdViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +160,7 @@
                             <constraint firstItem="enb-xF-DVK" firstAttribute="top" secondItem="QBs-R2-aNs" secondAttribute="top" constant="20" id="KSw-ob-awV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="third" id="Jac-Hr-IRQ"/>
+                    <tabBarItem key="tabBarItem" title="Artist" image="person.circle.fill" catalog="system" id="Jac-Hr-IRQ"/>
                     <connections>
                         <outlet property="artistPicker" destination="MhH-PD-O9I" id="Ra0-UK-7tL"/>
                         <outlet property="choiceLabel" destination="otc-4a-Vho" id="JEt-pI-PWe"/>
@@ -108,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="880.58035714285711"/>
         </scene>
-        <!--Fourth-->
+        <!--Listen-->
         <scene sceneID="AZ2-7c-KbQ">
             <objects>
                 <viewController id="szt-So-Wy5" customClass="FourthViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,13 +195,13 @@
                             <constraint firstItem="pXf-24-fqi" firstAttribute="centerX" secondItem="y9k-4F-tYU" secondAttribute="centerX" id="ZOl-oL-Q4O"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fourth" id="Xsz-Wv-W5x"/>
+                    <tabBarItem key="tabBarItem" title="Listen" image="play.fill" catalog="system" id="Xsz-Wv-W5x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qow-97-AuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1513.0434782608697" y="880.58035714285711"/>
         </scene>
-        <!--Second-->
+        <!--Decades-->
         <scene sceneID="mtl-JV-48s">
             <objects>
                 <viewController id="9jR-4d-UGM" customClass="SecondViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +241,7 @@
                             <constraint firstItem="GGb-S1-cZT" firstAttribute="top" secondItem="YSa-0N-4iF" secondAttribute="top" constant="20" id="gIR-uz-UMk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" id="DOt-DE-aNb"/>
+                    <tabBarItem key="tabBarItem" title="Decades" image="arrow.clockwise" catalog="system" id="DOt-DE-aNb"/>
                     <connections>
                         <outlet property="choiceLabel" destination="xfp-ik-mic" id="Hzj-Rw-xlW"/>
                         <outlet property="musicPicker" destination="yUN-8v-KdX" id="vMn-fP-cMP"/>
@@ -198,20 +260,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.63150606239999996" green="0.68752886199999996" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.63150606239999996" green="0.68752886199999996" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemPurpleColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="A6o-2B-aMV"/>
                         <segue destination="9jR-4d-UGM" kind="relationship" relationship="viewControllers" id="9ga-74-tNR"/>
                         <segue destination="HEa-5q-aOk" kind="relationship" relationship="viewControllers" id="skQ-I5-2EN"/>
                         <segue destination="szt-So-Wy5" kind="relationship" relationship="viewControllers" id="8zr-Qc-hYJ"/>
+                        <segue destination="qGN-vY-dxa" kind="relationship" relationship="viewControllers" id="eF7-JW-Aqz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llG-op-uRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="113"/>
+            <point key="canvasLocation" x="-91" y="105"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="mic" catalog="system" width="108" height="128"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>Coffee Drinks</string>
+		<key>items</key>
+		<array>
+			<string>Latte</string>
+			<string>Iced Coffee</string>
+			<string>Flat White</string>
+			<string>Machiatto</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>Non-Coffee Drinks</string>
+		<key>items</key>
+		<array>
+			<string>Milk Tea</string>
+			<string>Italian Soda</string>
+			<string>Chocolate Milk</string>
+			<string>Iced Tea Lemonade</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>Food</string>
+		<key>items</key>
+		<array>
+			<string>Bagel</string>
+			<string>Donut</string>
+			<string>Breakfast Sandwich</string>
+			<string>Fruit Bowl</string>
+		</array>
+	</dict>
+</array>
+</plist>
