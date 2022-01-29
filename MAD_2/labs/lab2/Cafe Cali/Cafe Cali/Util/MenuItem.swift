@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct MenuItem: Decodable {
+    let type: String
+    let items: [String]
+}

@@ -17,16 +17,15 @@ class OpenMapsViewController: UIViewController {
     
 
     @IBAction func openMaps(_ sender: Any) {
+        if UIApplication.shared.canOpenURL(URL(string: "https://www.google.com/maps")!) {
         UIApplication.shared.open(URL(string: "https://www.google.com/maps")!, options: [:], completionHandler: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "You do not have a browser installed to open google maps", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
+    
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

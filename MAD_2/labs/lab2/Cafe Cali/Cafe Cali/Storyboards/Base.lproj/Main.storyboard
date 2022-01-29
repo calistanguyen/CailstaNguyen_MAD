@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3d-cG-E04">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View-->
+        <!--Tab Bar Controller-->
         <scene sceneID="6Ye-Ua-X0p">
             <objects>
-                <tabBarController id="j3d-cG-E04" customClass="view" sceneMemberID="viewController">
+                <tabBarController id="j3d-cG-E04" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wFJ-Gi-ssI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,6 +19,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="4Jn-wV-WRo" kind="relationship" relationship="viewControllers" id="UyK-5E-dzS"/>
+                        <segue destination="1yw-O2-0VP" kind="relationship" relationship="viewControllers" id="6ud-3M-9cg"/>
+                        <segue destination="uRo-kV-77M" kind="relationship" relationship="viewControllers" id="KF8-4I-Eiv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAa-7o-B0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -29,38 +31,155 @@
         <scene sceneID="AUj-zT-BcZ">
             <objects>
                 <viewController id="4Jn-wV-WRo" customClass="MenuViewController" customModule="Cafe_Cali" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yCw-dX-TTz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleAspectFit" id="yCw-dX-TTz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-0w-7ua">
-                                <rect key="frame" x="176" y="148" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxV-zm-7E0">
-                                <rect key="frame" x="0.0" y="248" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="4Jn-wV-WRo" id="CVh-1B-Z6m"/>
-                                    <outlet property="delegate" destination="4Jn-wV-WRo" id="fOW-Mt-Ohz"/>
-                                </connections>
-                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yVB-Op-sKO">
+                                <rect key="frame" x="27.666666666666657" y="64" width="320" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="TUc-IQ-9ya">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-0w-7ua">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="yxV-zm-7E0">
+                                                <rect key="frame" x="0.0" y="64" width="320" height="216"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="4Jn-wV-WRo" id="CVh-1B-Z6m"/>
+                                                    <outlet property="delegate" destination="4Jn-wV-WRo" id="fOW-Mt-Ohz"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CsS-Ug-Ur8">
+                                        <rect key="frame" x="60" y="280" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ONj-OY-o7A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yVB-Op-sKO" firstAttribute="centerX" secondItem="yCw-dX-TTz" secondAttribute="centerX" id="MEe-z4-Ddl"/>
+                            <constraint firstItem="yVB-Op-sKO" firstAttribute="top" secondItem="ONj-OY-o7A" secondAttribute="top" constant="20" id="amk-4A-lCP">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" id="UEH-CX-cTC"/>
+                    <connections>
+                        <outlet property="menuImage" destination="CsS-Ug-Ur8" id="nKn-hR-0K1"/>
+                        <outlet property="menuPicker" destination="yxV-zm-7E0" id="QI1-Q7-hgM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9Y-Mn-vGP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="279"/>
+            <point key="canvasLocation" x="-1133.3333333333335" y="278.57142857142856"/>
+        </scene>
+        <!--Online Order-->
+        <scene sceneID="NGU-xL-MfV">
+            <objects>
+                <viewController id="1yw-O2-0VP" customClass="OrderViewController" customModule="Cafe_Cali" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Hd-0f-ExY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Fdz-z4-a2x">
+                                <rect key="frame" x="27.666666666666657" y="64" width="320" height="316"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdE-Fz-X8m">
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="136.66666666666663" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HPY-du-vKh">
+                                        <rect key="frame" x="0.0" y="65" width="320" height="216"/>
+                                        <connections>
+                                            <action selector="onDateChanged:" destination="1yw-O2-0VP" eventType="valueChanged" id="pDq-81-zmS"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-56-gix">
+                                        <rect key="frame" x="160" y="316" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9gJ-DA-Enk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fdz-z4-a2x" firstAttribute="top" secondItem="9gJ-DA-Enk" secondAttribute="top" constant="20" id="jgh-kB-4Hb"/>
+                            <constraint firstItem="Fdz-z4-a2x" firstAttribute="centerX" secondItem="4Hd-0f-ExY" secondAttribute="centerX" id="khX-ys-JXY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Online Order" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="Uan-fn-WiG"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="SCU-56-gix" id="nho-BT-ze3"/>
+                        <outlet property="datePicker" destination="HPY-du-vKh" id="2OC-XU-xOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1j-vx-t5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-389.60000000000002" y="284.48275862068965"/>
+        </scene>
+        <!--Calculate Tip-->
+        <scene sceneID="Q7l-da-4T0">
+            <objects>
+                <viewController id="uRo-kV-77M" customClass="OpenMapsViewController" customModule="Cafe_Cali" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v7m-7O-uR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="136" translatesAutoresizingMaskIntoConstraints="NO" id="ZG7-sf-eyc">
+                                <rect key="frame" x="70.333333333333329" y="64" width="234.66666666666669" height="197"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Nearest Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We8-jl-oyJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="234.66666666666666" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEI-yF-gti">
+                                        <rect key="frame" x="68.333333333333329" y="166" width="97.999999999999986" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Open Maps"/>
+                                        <connections>
+                                            <action selector="openMaps:" destination="uRo-kV-77M" eventType="touchUpInside" id="P8F-lL-2aw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CEg-tV-hJd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZG7-sf-eyc" firstAttribute="centerX" secondItem="v7m-7O-uR9" secondAttribute="centerX" id="2NU-EP-dNO"/>
+                            <constraint firstItem="ZG7-sf-eyc" firstAttribute="top" secondItem="CEg-tV-hJd" secondAttribute="top" constant="20" id="YRh-O6-XUD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calculate Tip" image="dollarsign.circle" catalog="system" id="fg8-X1-NhG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xC0-R8-p8Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.60000000000002" y="277.83251231527095"/>
         </scene>
     </scenes>
     <resources>
+        <image name="coffee" width="200" height="200"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="menucard" catalog="system" width="107" height="128"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
