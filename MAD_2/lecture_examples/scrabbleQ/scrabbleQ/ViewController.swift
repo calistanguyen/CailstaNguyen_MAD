@@ -13,12 +13,28 @@ class ViewController: UITableViewController {
     var data = DataLoader()
     let wordFile = "qwordswithoutu1"
     
+    var searchController = UISearchController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         data.loadData(fileName: wordFile)
         words = data.getWords()
         // Do any additional setup after loading the view.
+        
+        //search results
+        //search results
+        let resultsController = SearchResultsViewController() //create an instance of our SearchResultsController class
+        resultsController.allWords = words //set the allwords property to our words array
+        searchController = UISearchController(searchResultsController: resultsController) //initialize our search controller with the resultsController when it has search results to display
+        //search bar configuration
+        searchController.searchBar.placeholder = "Enter a search term" //place holder text
+        searchController.searchBar.sizeToFit() //sets appropriate size for the search bar
+        tableView.tableHeaderView=searchController.searchBar //install the search bar as the table header
+        searchController.searchResultsUpdater = resultsController //sets the instance to update search results
+        
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
