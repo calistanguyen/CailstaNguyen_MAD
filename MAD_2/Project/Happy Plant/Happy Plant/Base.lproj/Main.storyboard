@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WGP-aP-wja">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pXl-cB-eyH">
+            <objects>
+                <viewController id="nZe-hk-uKe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dun-2Q-OfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pMY-tI-Dsm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="-2" title="" image="bandaid_tab" selectedImage="selected_bandaid_tab" id="TvQ-kg-Nry"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGa-rG-lHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1018" y="731"/>
+        </scene>
+        <!--Happy Plant-->
+        <scene sceneID="SFP-Je-dbH">
+            <objects>
+                <viewController id="vbc-Gj-QXA" customClass="DashboardViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xes-Sb-wf6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, Feb. 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gU-Ar-xBB">
+                                <rect key="frame" x="20" y="110" width="374" height="55"/>
+                                <color key="backgroundColor" red="0.55504763130000001" green="0.72818845509999997" blue="0.56642967460000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="kLn-GC-gSs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-bE-qBM">
+                                <rect key="frame" x="0.0" y="191" width="414" height="438"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="plants that need watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-oF-FN1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-g1-RaB">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="0zC-ji-Vsi"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3HO-at-ypH">
+                                            <size key="itemSize" width="150" height="150"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="water_cell" id="oaq-Yl-XVR" customClass="WaterCollectionViewCell" customModule="Happy_Plant" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ifv-mj-JOk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="vbc-Gj-QXA" id="lTV-AP-hka"/>
+                                            <outlet property="delegate" destination="vbc-Gj-QXA" id="O0p-kk-vdg"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plants that need fertilizing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDq-dx-tqo">
+                                        <rect key="frame" x="0.0" y="232" width="414" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eoU-0C-UGD">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="egL-9x-zG7"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="buf-G1-Xhh">
+                                            <size key="itemSize" width="150" height="150"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fertilize_cell" id="1N9-Sq-aIw" customClass="FertilizeCollectionViewCell" customModule="Happy_Plant" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GjJ-n7-4Uw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="vbc-Gj-QXA" id="mCk-ED-C52"/>
+                                            <outlet property="delegate" destination="vbc-Gj-QXA" id="jyN-uV-9jD"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tkm-1g-2ws"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tkm-1g-2ws" firstAttribute="trailing" secondItem="6gU-Ar-xBB" secondAttribute="trailing" constant="20" id="7r6-ou-fFU"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="leading" secondItem="Tkm-1g-2ws" secondAttribute="leading" id="N5X-Fz-3XN"/>
+                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="top" secondItem="Tkm-1g-2ws" secondAttribute="top" constant="22" id="Niz-Zp-jdK"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="top" secondItem="6gU-Ar-xBB" secondAttribute="bottom" constant="26" id="UFc-mH-Wxq"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="trailing" secondItem="Tkm-1g-2ws" secondAttribute="trailing" id="jYY-QN-Tkn"/>
+                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="leading" secondItem="Tkm-1g-2ws" secondAttribute="leading" constant="20" id="kA6-rh-M1U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Happy Plant" id="Cou-8z-ZsJ"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="6gU-Ar-xBB" id="P7r-Gl-thD"/>
+                        <outlet property="fertilizeCollection" destination="eoU-0C-UGD" id="HWd-6E-mks"/>
+                        <outlet property="waterCollection" destination="BQc-g1-RaB" id="amS-Zd-CKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvZ-Mr-mgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988.40579710144937" y="-377.00892857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vCf-No-i6l">
+            <objects>
+                <tabBarController id="WGP-aP-wja" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h7b-tJ-1xc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b1L-GP-xKk" kind="relationship" relationship="viewControllers" id="cBU-vx-ZA0"/>
+                        <segue destination="XGM-11-FFa" kind="relationship" relationship="viewControllers" id="Jaz-9w-BPH"/>
+                        <segue destination="nZe-hk-uKe" kind="relationship" relationship="viewControllers" id="U2P-UB-SkH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLw-vj-nb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-811" y="-74"/>
+        </scene>
+        <!--Your Plants-->
+        <scene sceneID="sON-tu-pAY">
+            <objects>
+                <tableViewController id="0oN-xy-PUf" customClass="MyPlantsTableViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7GC-Wf-2dA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="epg-15-THN">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="epg-15-THN" id="8u8-fQ-P1h">
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="setSelectedBackgroundView">
+                                        <color key="value" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="DvS-0V-jjs" kind="show" id="PmR-A3-Grp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0oN-xy-PUf" id="O1Y-S6-EVD"/>
+                            <outlet property="delegate" destination="0oN-xy-PUf" id="Ifz-G8-K8s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Your Plants" id="hpU-ji-UyO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqt-FZ-fIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515.9420289855075" y="335.49107142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ffG-KI-sYy">
+            <objects>
+                <viewController id="DvS-0V-jjs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fhf-7O-Ts2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2yn-ej-53S">
+                                <rect key="frame" x="33" y="488" width="100" height="45"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5O4-8Y-r7w">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="e4W-tB-crb"/>
+                                            <constraint firstAttribute="height" constant="45" id="tH8-D1-91D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-ig-8Ib">
+                                        <rect key="frame" x="55" y="0.0" width="45" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Vk-cDH">
+                                <rect key="frame" x="33" y="552" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="X4r-go-O2M"/>
+                                    <constraint firstAttribute="width" constant="45" id="mdW-qr-esI"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xys-qx-rXQ">
+                                <rect key="frame" x="99" y="557" width="295" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="water_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-RY-wza">
+                                <rect key="frame" x="33" y="614" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="rlI-Ku-W3C"/>
+                                    <constraint firstAttribute="height" constant="45" id="vKH-OX-DJl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="fertilize" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-Ng-l1p">
+                                <rect key="frame" x="33" y="675" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="146-7N-8pa"/>
+                                    <constraint firstAttribute="width" constant="45" id="NOo-vK-m6d"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-hZ-iI7">
+                                <rect key="frame" x="107" y="219" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lgw-cQ-hs4"/>
+                                    <constraint firstAttribute="height" constant="200" id="rsB-Ui-LCR"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-hU-Cqs">
+                                <rect key="frame" x="99" y="614" width="154" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNI-b7-F9F">
+                                <rect key="frame" x="99" y="675" width="154" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eKb-YO-1fJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xys-qx-rXQ" firstAttribute="leading" secondItem="QWz-Vk-cDH" secondAttribute="trailing" constant="21" id="CnX-ww-TVP"/>
+                            <constraint firstItem="HKY-hZ-iI7" firstAttribute="top" secondItem="eKb-YO-1fJ" secondAttribute="top" constant="131" id="IMg-GZ-dO2"/>
+                            <constraint firstItem="HKY-hZ-iI7" firstAttribute="centerX" secondItem="Fhf-7O-Ts2" secondAttribute="centerX" id="kVm-QG-3fH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bs6-6K-KQS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-kb-p2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2311.594202898551" y="334.82142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GQ8-CU-vQI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b1L-GP-xKk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home_tab" selectedImage="selected_home_tab" id="iZH-C5-o1u">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="selected_home_tab"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6TR-l6-DZV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="32"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="32"/>
+                        </textAttributes>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <nil key="shadowImage"/>
+                        </variation>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vbc-Gj-QXA" kind="relationship" relationship="rootViewController" id="Le4-Pj-IC8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dj-X5-SXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.260869565217391" y="-377.00892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8cb-5B-Dle">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XGM-11-FFa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="plant_tab" selectedImage="selected_plant_tab" id="7lz-8l-iel"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XL0-eX-cwY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="32"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0oN-xy-PUf" kind="relationship" relationship="rootViewController" id="FYF-I2-fQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFG-LA-Ltx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.79710144927537" y="335.49107142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bandaid_tab" width="36" height="36"/>
+        <image name="fertilize" width="512" height="512"/>
+        <image name="home_tab" width="38" height="36"/>
+        <image name="location_icon" width="512" height="512"/>
+        <image name="plant_icon" width="512" height="512"/>
+        <image name="plant_tab" width="31" height="38"/>
+        <image name="selected_bandaid_tab" width="36" height="36"/>
+        <image name="selected_home_tab" width="38" height="36"/>
+        <image name="selected_plant_tab" width="31" height="38"/>
+        <image name="water_icon" width="512" height="512"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

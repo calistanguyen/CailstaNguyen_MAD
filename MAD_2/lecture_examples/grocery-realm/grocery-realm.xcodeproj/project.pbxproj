@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7367059527CE81D5000922C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367059427CE81D5000922C5 /* AppDelegate.swift */; };
+		7367059727CE81D5000922C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367059627CE81D5000922C5 /* SceneDelegate.swift */; };
+		7367059C27CE81D5000922C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7367059A27CE81D5000922C5 /* Main.storyboard */; };
+		7367059E27CE81D6000922C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7367059D27CE81D6000922C5 /* Assets.xcassets */; };
+		736705A127CE81D6000922C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7367059F27CE81D6000922C5 /* LaunchScreen.storyboard */; };
+		736705A927CE8742000922C5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736705A827CE8742000922C5 /* TableViewController.swift */; };
+		736705AB27CE8763000922C5 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736705AA27CE8763000922C5 /* Grocery.swift */; };
+		736705AD27CE8C96000922C5 /* GroceryDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736705AC27CE8C96000922C5 /* GroceryDataHandler.swift */; };
+		96E9DC17E5904137D9DF8C30 /* Pods_grocery_realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0177479938B9F0BF1D6D424B /* Pods_grocery_realm.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0177479938B9F0BF1D6D424B /* Pods_grocery_realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grocery_realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DF2313E51969B2EF3B3C45 /* Pods-grocery-realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grocery-realm.release.xcconfig"; path = "Target Support Files/Pods-grocery-realm/Pods-grocery-realm.release.xcconfig"; sourceTree = "<group>"; };
+		7367059127CE81D5000922C5 /* grocery-realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grocery-realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7367059427CE81D5000922C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7367059627CE81D5000922C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7367059B27CE81D5000922C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7367059D27CE81D6000922C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		736705A027CE81D6000922C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		736705A227CE81D6000922C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		736705A827CE8742000922C5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		736705AA27CE8763000922C5 /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
+		736705AC27CE8C96000922C5 /* GroceryDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryDataHandler.swift; sourceTree = "<group>"; };
+		9508C70E39D004D16C553932 /* Pods-grocery-realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grocery-realm.debug.xcconfig"; path = "Target Support Files/Pods-grocery-realm/Pods-grocery-realm.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7367058E27CE81D5000922C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E9DC17E5904137D9DF8C30 /* Pods_grocery_realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C68A934DF870E7FCD33FBC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9508C70E39D004D16C553932 /* Pods-grocery-realm.debug.xcconfig */,
+				07DF2313E51969B2EF3B3C45 /* Pods-grocery-realm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7367058827CE81D5000922C5 = {
+			isa = PBXGroup;
+			children = (
+				7367059327CE81D5000922C5 /* grocery-realm */,
+				7367059227CE81D5000922C5 /* Products */,
+				4C68A934DF870E7FCD33FBC4 /* Pods */,
+				C0785C8F82D77ED97E36BBF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7367059227CE81D5000922C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7367059127CE81D5000922C5 /* grocery-realm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7367059327CE81D5000922C5 /* grocery-realm */ = {
+			isa = PBXGroup;
+			children = (
+				7367059427CE81D5000922C5 /* AppDelegate.swift */,
+				7367059627CE81D5000922C5 /* SceneDelegate.swift */,
+				7367059A27CE81D5000922C5 /* Main.storyboard */,
+				736705AA27CE8763000922C5 /* Grocery.swift */,
+				736705AC27CE8C96000922C5 /* GroceryDataHandler.swift */,
+				736705A827CE8742000922C5 /* TableViewController.swift */,
+				7367059D27CE81D6000922C5 /* Assets.xcassets */,
+				7367059F27CE81D6000922C5 /* LaunchScreen.storyboard */,
+				736705A227CE81D6000922C5 /* Info.plist */,
+			);
+			path = "grocery-realm";
+			sourceTree = "<group>";
+		};
+		C0785C8F82D77ED97E36BBF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0177479938B9F0BF1D6D424B /* Pods_grocery_realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7367059027CE81D5000922C5 /* grocery-realm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 736705A527CE81D6000922C5 /* Build configuration list for PBXNativeTarget "grocery-realm" */;
+			buildPhases = (
+				7AC27B0B4E862A21239AA03A /* [CP] Check Pods Manifest.lock */,
+				7367058D27CE81D5000922C5 /* Sources */,
+				7367058E27CE81D5000922C5 /* Frameworks */,
+				7367058F27CE81D5000922C5 /* Resources */,
+				47B9745AA2093118A59905AD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "grocery-realm";
+			productName = "grocery-realm";
+			productReference = 7367059127CE81D5000922C5 /* grocery-realm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7367058927CE81D5000922C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					7367059027CE81D5000922C5 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 7367058C27CE81D5000922C5 /* Build configuration list for PBXProject "grocery-realm" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7367058827CE81D5000922C5;
+			productRefGroup = 7367059227CE81D5000922C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7367059027CE81D5000922C5 /* grocery-realm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7367058F27CE81D5000922C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				736705A127CE81D6000922C5 /* LaunchScreen.storyboard in Resources */,
+				7367059E27CE81D6000922C5 /* Assets.xcassets in Resources */,
+				7367059C27CE81D5000922C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47B9745AA2093118A59905AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grocery-realm/Pods-grocery-realm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-grocery-realm/Pods-grocery-realm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-grocery-realm/Pods-grocery-realm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AC27B0B4E862A21239AA03A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grocery-realm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7367058D27CE81D5000922C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7367059527CE81D5000922C5 /* AppDelegate.swift in Sources */,
+				736705A927CE8742000922C5 /* TableViewController.swift in Sources */,
+				7367059727CE81D5000922C5 /* SceneDelegate.swift in Sources */,
+				736705AD27CE8C96000922C5 /* GroceryDataHandler.swift in Sources */,
+				736705AB27CE8763000922C5 /* Grocery.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7367059A27CE81D5000922C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7367059B27CE81D5000922C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7367059F27CE81D6000922C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				736705A027CE81D6000922C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		736705A327CE81D6000922C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		736705A427CE81D6000922C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		736705A627CE81D6000922C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9508C70E39D004D16C553932 /* Pods-grocery-realm.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ASNDWG33H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grocery-realm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.grocery-realm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		736705A727CE81D6000922C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07DF2313E51969B2EF3B3C45 /* Pods-grocery-realm.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ASNDWG33H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grocery-realm/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.grocery-realm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7367058C27CE81D5000922C5 /* Build configuration list for PBXProject "grocery-realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				736705A327CE81D6000922C5 /* Debug */,
+				736705A427CE81D6000922C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		736705A527CE81D6000922C5 /* Build configuration list for PBXNativeTarget "grocery-realm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				736705A627CE81D6000922C5 /* Debug */,
+				736705A727CE81D6000922C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7367058927CE81D5000922C5 /* Project object */;
+}
