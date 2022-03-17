@@ -17,7 +17,6 @@ class MyPlantsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return testPlantData.count
     }
 
@@ -40,6 +39,21 @@ class MyPlantsTableViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    //MARK: prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPlantDetails"{
+            if let plantDetailVC = segue.destination as? PlantDetailsViewController {
+                if let indexPath = tableView.indexPath(for: (sender as? UITableViewCell)!) {
+                    plantDetailVC.title = testPlantData[indexPath.row].name
+                    plantDetailVC.dateValue = testPlantData[indexPath.row].dayToFertilize
+                    plantDetailVC.locationValue = testPlantData[indexPath.row].location
+                    plantDetailVC.pickerValue = testPlantData[indexPath.row].waterDay
+                    plantDetailVC.plantValue = testPlantData[indexPath.row].plantType
+                }
+            }
+        }
     }
 
 }

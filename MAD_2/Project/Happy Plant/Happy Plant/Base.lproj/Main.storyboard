@@ -12,6 +12,9 @@
         <array key="Quicksand-Bold.ttf">
             <string>Quicksand-Bold</string>
         </array>
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -186,7 +189,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="DvS-0V-jjs" kind="show" id="PmR-A3-Grp"/>
+                                    <segue destination="DvS-0V-jjs" kind="show" identifier="showPlantDetails" id="PmR-A3-Grp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -195,88 +198,137 @@
                             <outlet property="delegate" destination="0oN-xy-PUf" id="Ifz-G8-K8s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Plants" id="hpU-ji-UyO"/>
+                    <navigationItem key="navigationItem" title="Your Plants" id="hpU-ji-UyO">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="05Z-D3-9yr"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqt-FZ-fIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1515.9420289855075" y="335.49107142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Plant Details View Controller-->
         <scene sceneID="ffG-KI-sYy">
             <objects>
-                <viewController id="DvS-0V-jjs" sceneMemberID="viewController">
+                <viewController id="DvS-0V-jjs" customClass="PlantDetailsViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fhf-7O-Ts2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2yn-ej-53S">
-                                <rect key="frame" x="33" y="488" width="100" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-Qp-74v">
+                                <rect key="frame" x="26.5" y="198" width="361" height="500"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5O4-8Y-r7w">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="628324" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-hZ-iI7">
+                                        <rect key="frame" x="80.5" y="0.0" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="e4W-tB-crb"/>
-                                            <constraint firstAttribute="height" constant="45" id="tH8-D1-91D"/>
+                                            <constraint firstAttribute="width" constant="200" id="Lgw-cQ-hs4"/>
+                                            <constraint firstAttribute="height" constant="200" id="rsB-Ui-LCR"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-ig-8Ib">
-                                        <rect key="frame" x="55" y="0.0" width="45" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-HJ-KfY">
+                                        <rect key="frame" x="0.0" y="269" width="361" height="231"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-tA-VEC">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="45"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5O4-8Y-r7w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="e4W-tB-crb"/>
+                                                            <constraint firstAttribute="height" constant="45" id="tH8-D1-91D"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-ig-8Ib">
+                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="MOP-ig-8Ib" secondAttribute="height" multiplier="59:9" id="NgY-sJ-bBV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-zL-XS9">
+                                                <rect key="frame" x="0.0" y="62" width="361" height="45"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Vk-cDH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="X4r-go-O2M"/>
+                                                            <constraint firstAttribute="width" constant="45" id="mdW-qr-esI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Qp-JY-Btg">
+                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8Qp-JY-Btg" secondAttribute="height" multiplier="59:9" id="S2e-Z3-46o"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="wYj-7P-pJY">
+                                                <rect key="frame" x="0.0" y="124" width="361" height="45"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="water_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-RY-wza">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="rlI-Ku-W3C"/>
+                                                            <constraint firstAttribute="height" constant="45" id="vKH-OX-DJl"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-hU-Cqs">
+                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="OhC-hU-Cqs" secondAttribute="height" multiplier="59:9" id="zQT-Q8-1Cp"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="DvS-0V-jjs" id="n0h-3V-V0m"/>
+                                                            <outlet property="delegate" destination="DvS-0V-jjs" id="XQM-qT-Lg4"/>
+                                                        </connections>
+                                                    </pickerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-Vt-KNL">
+                                                <rect key="frame" x="0.0" y="186" width="297.5" height="45"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="fertilize" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-Ng-l1p">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="146-7N-8pa"/>
+                                                            <constraint firstAttribute="width" constant="45" id="NOo-vK-m6d"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Wvq-IH-51R">
+                                                        <rect key="frame" x="47" y="0.0" width="250.5" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Wvq-IH-51R" secondAttribute="height" multiplier="295:53" id="s6S-Lw-4sd"/>
+                                                        </constraints>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pHQ-Qp-74v" secondAttribute="height" multiplier="361:500" id="8lD-WD-uhz"/>
+                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Vk-cDH">
-                                <rect key="frame" x="33" y="552" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="X4r-go-O2M"/>
-                                    <constraint firstAttribute="width" constant="45" id="mdW-qr-esI"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xys-qx-rXQ">
-                                <rect key="frame" x="99" y="557" width="295" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="water_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-RY-wza">
-                                <rect key="frame" x="33" y="614" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="rlI-Ku-W3C"/>
-                                    <constraint firstAttribute="height" constant="45" id="vKH-OX-DJl"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="fertilize" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-Ng-l1p">
-                                <rect key="frame" x="33" y="675" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="146-7N-8pa"/>
-                                    <constraint firstAttribute="width" constant="45" id="NOo-vK-m6d"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-hZ-iI7">
-                                <rect key="frame" x="107" y="219" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Lgw-cQ-hs4"/>
-                                    <constraint firstAttribute="height" constant="200" id="rsB-Ui-LCR"/>
-                                </constraints>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-hU-Cqs">
-                                <rect key="frame" x="99" y="614" width="154" height="45"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNI-b7-F9F">
-                                <rect key="frame" x="99" y="675" width="154" height="45"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eKb-YO-1fJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xys-qx-rXQ" firstAttribute="leading" secondItem="QWz-Vk-cDH" secondAttribute="trailing" constant="21" id="CnX-ww-TVP"/>
-                            <constraint firstItem="HKY-hZ-iI7" firstAttribute="top" secondItem="eKb-YO-1fJ" secondAttribute="top" constant="131" id="IMg-GZ-dO2"/>
-                            <constraint firstItem="HKY-hZ-iI7" firstAttribute="centerX" secondItem="Fhf-7O-Ts2" secondAttribute="centerX" id="kVm-QG-3fH"/>
+                            <constraint firstItem="pHQ-Qp-74v" firstAttribute="centerY" secondItem="Fhf-7O-Ts2" secondAttribute="centerY" id="jdO-cT-EUT"/>
+                            <constraint firstItem="pHQ-Qp-74v" firstAttribute="centerX" secondItem="Fhf-7O-Ts2" secondAttribute="centerX" id="ofo-AL-ccI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bs6-6K-KQS"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Bs6-6K-KQS"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Wvq-IH-51R" id="Kxu-8M-UJZ"/>
+                        <outlet property="location" destination="8Qp-JY-Btg" id="jUQ-2T-gSq"/>
+                        <outlet property="picker" destination="OhC-hU-Cqs" id="eqN-Lw-n2g"/>
+                        <outlet property="plant" destination="MOP-ig-8Ib" id="XeD-aM-6hh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-kb-p2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,6 +375,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XL0-eX-cwY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="32"/>
                         </textAttributes>
@@ -341,12 +394,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="628324" width="512" height="512"/>
         <image name="bandaid_tab" width="36" height="36"/>
         <image name="fertilize" width="512" height="512"/>
         <image name="home_tab" width="38" height="36"/>
         <image name="location_icon" width="512" height="512"/>
         <image name="plant_icon" width="512" height="512"/>
         <image name="plant_tab" width="31" height="38"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="selected_bandaid_tab" width="36" height="36"/>
         <image name="selected_home_tab" width="38" height="36"/>
         <image name="selected_plant_tab" width="31" height="38"/>
