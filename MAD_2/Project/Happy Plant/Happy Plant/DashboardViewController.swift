@@ -12,26 +12,45 @@ class DashboardViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var waterCollection: UICollectionView!
     @IBOutlet weak var fertilizeCollection: UICollectionView!
-    
+    var plants = [Plant]();
+    var dataHandler = DataHandler();
     var wateredPlants =  [Plant]();
     var fertilizedPlants = [Plant]();
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         registerWaterNib()
         registerFertilizeNib()
         dateLabel.layer.masksToBounds = true
         dateLabel.layer.cornerRadius = 30
-        setWateredPlants(testPlantData)
-        setFertilizedPlants(testPlantData)
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, MMM d"
+        dateLabel.text = dateFormatter.string(from: date)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getData();
     }
     
     //MARK: Get watered and fertilized plants for the day
+    func getData(){
+        Task {
+            await dataHandler.getFirebaseData()
+            plants = dataHandler.getPlants()
+            setWateredPlants(plants)
+            setFertilizedPlants(plants)
+            waterCollection.reloadData()
+            fertilizeCollection.reloadData()
+            print("Plant Recipes \(plants.count)")
+    } }
+    
     func setWateredPlants(_ plantData:[Plant]) {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
+        wateredPlants = [Plant]()
         for i in plantData {
             if(i.waterDay == dateFormatter.string(from: date)) {
                 wateredPlants.append(i);
@@ -43,7 +62,8 @@ class DashboardViewController: UIViewController, UICollectionViewDataSource, UIC
     func setFertilizedPlants(_ plantData:[Plant]) {
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, YYYY"
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        fertilizedPlants = [Plant]()
         print("DATE TODAY: " + dateFormatter.string(from: date))
         for i in plantData {
 

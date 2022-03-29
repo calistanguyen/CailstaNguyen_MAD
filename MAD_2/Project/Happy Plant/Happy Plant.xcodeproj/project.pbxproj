@@ -15,6 +15,10 @@
 		733F6D0427E2EBAE00BD7375 /* MyPlantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */; };
 		733F6D0627E3032F00BD7375 /* PlantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */; };
 		733F6D0827E30D1900BD7375 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 733F6D0727E30D1900BD7375 /* GoogleService-Info.plist */; };
+		73445D1127F154F0006D99C3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 73445D1027F154F0006D99C3 /* FirebaseFirestore */; };
+		73445D1327F154F0006D99C3 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 73445D1227F154F0006D99C3 /* FirebaseFirestoreSwift-Beta */; };
+		73445D1527F15689006D99C3 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73445D1427F15689006D99C3 /* DataHandler.swift */; };
+		73445D1727F293AC006D99C3 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73445D1627F293AC006D99C3 /* AddPlantViewController.swift */; };
 		7367057527CE7F8F000922C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367057427CE7F8F000922C5 /* AppDelegate.swift */; };
 		7367057727CE7F8F000922C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367057627CE7F8F000922C5 /* SceneDelegate.swift */; };
 		7367057C27CE7F8F000922C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7367057A27CE7F8F000922C5 /* Main.storyboard */; };
@@ -37,6 +41,8 @@
 		733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsTableViewController.swift; sourceTree = "<group>"; };
 		733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsViewController.swift; sourceTree = "<group>"; };
 		733F6D0727E30D1900BD7375 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73445D1427F15689006D99C3 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		73445D1627F293AC006D99C3 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		7367057127CE7F8F000922C5 /* Happy Plant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Plant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7367057427CE7F8F000922C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7367057627CE7F8F000922C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73445D1127F154F0006D99C3 /* FirebaseFirestore in Frameworks */,
+				73445D1327F154F0006D99C3 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				7388A19B27DA659E0069A59D /* plant.swift */,
+				73445D1427F15689006D99C3 /* DataHandler.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 				73F7B2C927DAB295003B74B5 /* FertilizeCollectionViewCell.swift */,
 				733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */,
 				733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */,
+				73445D1627F293AC006D99C3 /* AddPlantViewController.swift */,
 			);
 			name = view_controllers;
 			sourceTree = "<group>";
@@ -154,6 +164,10 @@
 			dependencies = (
 			);
 			name = "Happy Plant";
+			packageProductDependencies = (
+				73445D1027F154F0006D99C3 /* FirebaseFirestore */,
+				73445D1227F154F0006D99C3 /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = "Happy Plant";
 			productReference = 7367057127CE7F8F000922C5 /* Happy Plant.app */;
 			productType = "com.apple.product-type.application";
@@ -183,7 +197,7 @@
 			);
 			mainGroup = 7367056827CE7F8F000922C5;
 			packageReferences = (
-				733F6D0927E30D6E00BD7375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				73445D0F27F154F0006D99C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7367057227CE7F8F000922C5 /* Products */;
 			projectDirPath = "";
@@ -220,10 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73445D1727F293AC006D99C3 /* AddPlantViewController.swift in Sources */,
 				7367057527CE7F8F000922C5 /* AppDelegate.swift in Sources */,
 				7388A1A127DA93F20069A59D /* WaterCollectionViewCell.swift in Sources */,
 				7388A19C27DA659E0069A59D /* plant.swift in Sources */,
 				73F7B2CB27DAB295003B74B5 /* FertilizeCollectionViewCell.swift in Sources */,
+				73445D1527F15689006D99C3 /* DataHandler.swift in Sources */,
 				733F6D0427E2EBAE00BD7375 /* MyPlantsTableViewController.swift in Sources */,
 				7388A19A27DA64A20069A59D /* DashboardViewController.swift in Sources */,
 				733F6D0627E3032F00BD7375 /* PlantDetailsViewController.swift in Sources */,
@@ -376,6 +392,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ASNDWG33H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happy Plant/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -392,7 +409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -403,6 +420,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9ASNDWG33H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Happy Plant/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -419,7 +437,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -447,15 +465,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		733F6D0927E30D6E00BD7375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		73445D0F27F154F0006D99C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.10.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73445D1027F154F0006D99C3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73445D0F27F154F0006D99C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		73445D1227F154F0006D99C3 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73445D0F27F154F0006D99C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7367056927CE7F8F000922C5 /* Project object */;
 }

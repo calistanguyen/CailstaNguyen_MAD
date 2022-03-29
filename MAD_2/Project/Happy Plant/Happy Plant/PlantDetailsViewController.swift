@@ -26,20 +26,33 @@ class PlantDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    @IBAction func edit(_ sender: UIBarButtonItem) {
+        plant.isEnabled = true
+        location.isEnabled = true
+        picker.isUserInteractionEnabled = true
+        datePicker.isEnabled = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        plant.isEnabled = false
+        location.isEnabled = false
+        picker.isUserInteractionEnabled = false
+        datePicker.isEnabled = false
         plant.text = plantValue
         location.text = locationValue
         picker.selectRow(getDayRow(pickerValue), inComponent: 0, animated: false)
         
+        print("CURR DATE \(dateValue)")
+        
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, YYYY"
-        let date = dateFormatter.date(from:dateValue)!
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month, .day], from: date)
-        let finalDate = calendar.date(from:components)
+        dateFormatter.dateFormat = "MMMM d, yyyy"
+        let finalDate = dateFormatter.date(from: dateValue)
+        
         datePicker.date = finalDate!
     }
+    
+    //MARK: picker view protocalls
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return days.count
@@ -47,6 +60,19 @@ class PlantDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return days[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = (view as? UILabel) ?? UILabel()
+
+        label.textColor = .black
+        label.textAlignment = .center
+        label.font = UIFont(name: "Quicksand-Regular", size: 18)
+
+        // where data is an Array of String
+        label.text = days[row]
+
+        return label
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
