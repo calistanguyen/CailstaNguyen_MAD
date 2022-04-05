@@ -1,0 +1,10 @@
+<resources>
+    <color name="primaryColor">#b3e5fc</color>
+    <color name="primaryLightColor">#e6ffff</color>
+    <color name="primaryDarkColor">#82b3c9</color>
+    <color name="secondaryColor">#ffcdd2</color>
+    <color name="secondaryLightColor">#ffffff</color>a
+    <color name="secondaryDarkColor">#cb9ca1</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+</resources>
