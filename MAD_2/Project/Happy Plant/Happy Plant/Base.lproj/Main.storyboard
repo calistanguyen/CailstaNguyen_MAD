@@ -15,23 +15,102 @@
         <array key="Quicksand-Regular.ttf">
             <string>Quicksand-Regular</string>
         </array>
+        <array key="Quicksand-SemiBold.ttf">
+            <string>Quicksand-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="pXl-cB-eyH">
+        <!--Plant Problems-->
+        <scene sceneID="0Rd-UG-5sM">
             <objects>
-                <viewController id="nZe-hk-uKe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dun-2Q-OfZ">
+                <tableViewController id="nnZ-jN-8Q1" customClass="ProblemsTableViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="B2i-uw-Zf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="pMY-tI-Dsm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="-2" title="" image="bandaid_tab" selectedImage="selected_bandaid_tab" id="TvQ-kg-Nry"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YGa-rG-lHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="problemCell" id="qfN-CL-jp0">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qfN-CL-jp0" id="QOP-gl-g2G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pzl-wX-Pjb" kind="show" identifier="viewProblemDetails" id="s6I-Pg-p24"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nnZ-jN-8Q1" id="gd6-MR-ogI"/>
+                            <outlet property="delegate" destination="nnZ-jN-8Q1" id="ADB-4a-UOo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Plant Problems" id="hnW-aG-JMV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dh-xH-oha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1018" y="731"/>
+            <point key="canvasLocation" x="-747.82608695652175" y="676.33928571428567"/>
+        </scene>
+        <!--Problem Details View Controller-->
+        <scene sceneID="nFl-o5-MIu">
+            <objects>
+                <viewController id="pzl-wX-Pjb" customClass="ProblemDetailsViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbf-ie-j4n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-QA-Q6i">
+                                <rect key="frame" x="107" y="286.5" width="200" height="323"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="829-iS-YaC">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="WsM-2x-O4x"/>
+                                            <constraint firstAttribute="height" constant="200" id="bOU-hR-ARu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQq-vh-AKw">
+                                        <rect key="frame" x="0.0" y="237" width="200" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="YAe-fe-6aX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMO-hd-kbw">
+                                        <rect key="frame" x="51" y="289" width="98" height="34"/>
+                                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="more info">
+                                            <fontDescription key="titleFontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="16"/>
+                                            <color key="baseBackgroundColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="openLink:" destination="pzl-wX-Pjb" eventType="touchUpInside" id="0OC-oU-gnF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OOl-Cy-bIy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RpP-QA-Q6i" firstAttribute="centerY" secondItem="dbf-ie-j4n" secondAttribute="centerY" id="cNe-xG-t9F"/>
+                            <constraint firstItem="RpP-QA-Q6i" firstAttribute="centerX" secondItem="dbf-ie-j4n" secondAttribute="centerX" id="hbO-gO-8Nr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fQ6-3Q-imJ"/>
+                    <connections>
+                        <outlet property="image" destination="829-iS-YaC" id="0NO-eB-Je4"/>
+                        <outlet property="label" destination="KQq-vh-AKw" id="JN8-Wz-wtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4s-yE-ccg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.536231884058" y="1014.5089285714286"/>
         </scene>
         <!--Happy Plant-->
         <scene sceneID="SFP-Je-dbH">
@@ -52,16 +131,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eCu-bE-qBM">
-                                <rect key="frame" x="0.0" y="191" width="414" height="438"/>
+                                <rect key="frame" x="20" y="191" width="374" height="438"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="plants that need watering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-oF-FN1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-g1-RaB">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="56" width="374" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="0zC-ji-Vsi"/>
@@ -88,13 +167,13 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plants that need fertilizing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDq-dx-tqo">
-                                        <rect key="frame" x="0.0" y="232" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="232" width="374" height="30"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eoU-0C-UGD">
-                                        <rect key="frame" x="0.0" y="288" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="288" width="374" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="egL-9x-zG7"/>
@@ -127,12 +206,12 @@
                         <viewLayoutGuide key="safeArea" id="Tkm-1g-2ws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tkm-1g-2ws" firstAttribute="trailing" secondItem="6gU-Ar-xBB" secondAttribute="trailing" constant="20" id="7r6-ou-fFU"/>
-                            <constraint firstItem="eCu-bE-qBM" firstAttribute="leading" secondItem="Tkm-1g-2ws" secondAttribute="leading" id="N5X-Fz-3XN"/>
-                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="top" secondItem="Tkm-1g-2ws" secondAttribute="top" constant="22" id="Niz-Zp-jdK"/>
-                            <constraint firstItem="eCu-bE-qBM" firstAttribute="top" secondItem="6gU-Ar-xBB" secondAttribute="bottom" constant="26" id="UFc-mH-Wxq"/>
-                            <constraint firstItem="eCu-bE-qBM" firstAttribute="trailing" secondItem="Tkm-1g-2ws" secondAttribute="trailing" id="jYY-QN-Tkn"/>
-                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="leading" secondItem="Tkm-1g-2ws" secondAttribute="leading" constant="20" id="kA6-rh-M1U"/>
+                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="leading" secondItem="eCu-bE-qBM" secondAttribute="leading" id="PR5-1R-SXv"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="leading" secondItem="Tkm-1g-2ws" secondAttribute="leading" constant="20" id="QP5-NQ-DQO"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="trailing" secondItem="Tkm-1g-2ws" secondAttribute="trailing" constant="-20" id="YpB-Z1-JU4"/>
+                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="trailing" secondItem="eCu-bE-qBM" secondAttribute="trailing" id="acY-aa-NDx"/>
+                            <constraint firstItem="6gU-Ar-xBB" firstAttribute="top" secondItem="Tkm-1g-2ws" secondAttribute="top" constant="22" id="lwy-wt-bjL"/>
+                            <constraint firstItem="eCu-bE-qBM" firstAttribute="top" secondItem="6gU-Ar-xBB" secondAttribute="bottom" constant="26" id="uFw-sn-rHi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Plant" id="Cou-8z-ZsJ"/>
@@ -159,7 +238,7 @@
                     <connections>
                         <segue destination="b1L-GP-xKk" kind="relationship" relationship="viewControllers" id="cBU-vx-ZA0"/>
                         <segue destination="XGM-11-FFa" kind="relationship" relationship="viewControllers" id="Jaz-9w-BPH"/>
-                        <segue destination="nZe-hk-uKe" kind="relationship" relationship="viewControllers" id="U2P-UB-SkH"/>
+                        <segue destination="HM4-3d-YoN" kind="relationship" relationship="viewControllers" id="SNP-xm-JHo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLw-vj-nb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,14 +280,14 @@
                     <navigationItem key="navigationItem" title="Your Plants" id="hpU-ji-UyO">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="05Z-D3-9yr">
                             <connections>
-                                <segue destination="PZj-sh-Fuy" kind="presentation" id="URY-Nq-DRr"/>
+                                <segue destination="PZj-sh-Fuy" kind="presentation" identifier="add_plant" id="URY-Nq-DRr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqt-FZ-fIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515.9420289855075" y="335.49107142857139"/>
+            <point key="canvasLocation" x="2426.0869565217395" y="334.82142857142856"/>
         </scene>
         <!--Plant Details View Controller-->
         <scene sceneID="ffG-KI-sYy">
@@ -218,134 +297,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-Qp-74v">
-                                <rect key="frame" x="26.5" y="198" width="361" height="500"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="adb-mT-ghK">
+                                <rect key="frame" x="116.5" y="244" width="181.5" height="408"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="628324" translatesAutoresizingMaskIntoConstraints="NO" id="HKY-hZ-iI7">
-                                        <rect key="frame" x="80.5" y="0.0" width="200" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Lgw-cQ-hs4"/>
-                                            <constraint firstAttribute="height" constant="200" id="rsB-Ui-LCR"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-HJ-KfY">
-                                        <rect key="frame" x="0.0" y="269" width="361" height="231"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-tA-VEC">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="45"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5O4-8Y-r7w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="e4W-tB-crb"/>
-                                                            <constraint firstAttribute="height" constant="45" id="tH8-D1-91D"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-ig-8Ib">
-                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="MOP-ig-8Ib" secondAttribute="height" multiplier="59:9" id="NgY-sJ-bBV"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-zL-XS9">
-                                                <rect key="frame" x="0.0" y="62" width="361" height="45"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-Vk-cDH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="X4r-go-O2M"/>
-                                                            <constraint firstAttribute="width" constant="45" id="mdW-qr-esI"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Qp-JY-Btg">
-                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="8Qp-JY-Btg" secondAttribute="height" multiplier="59:9" id="S2e-Z3-46o"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="wYj-7P-pJY">
-                                                <rect key="frame" x="0.0" y="124" width="361" height="45"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="water_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-RY-wza">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="rlI-Ku-W3C"/>
-                                                            <constraint firstAttribute="height" constant="45" id="vKH-OX-DJl"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-hU-Cqs">
-                                                        <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="OhC-hU-Cqs" secondAttribute="height" multiplier="59:9" id="zQT-Q8-1Cp"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="font" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="DvS-0V-jjs" id="n0h-3V-V0m"/>
-                                                            <outlet property="delegate" destination="DvS-0V-jjs" id="XQM-qT-Lg4"/>
-                                                        </connections>
-                                                    </pickerView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-Vt-KNL">
-                                                <rect key="frame" x="0.0" y="186" width="361" height="45"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="fertilize" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-Ng-l1p">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="146-7N-8pa"/>
-                                                            <constraint firstAttribute="width" constant="45" id="NOo-vK-m6d"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Wvq-IH-51R">
-                                                        <rect key="frame" x="67" y="0.0" width="294" height="45"/>
-                                                    </datePicker>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Wvq-IH-51R" secondAttribute="trailing" id="g8A-hj-ifw"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9W-cd-Kj2">
+                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-md-OC2">
+                                        <rect key="frame" x="0.0" y="42" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDT-DW-1qP">
+                                        <rect key="frame" x="0.0" y="84" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7a-Dd-5NU">
+                                        <rect key="frame" x="0.0" y="126" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joz-ol-sd0">
+                                        <rect key="frame" x="0.0" y="168" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNI-Lw-8wZ">
+                                        <rect key="frame" x="0.0" y="210" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfZ-7E-P8E">
+                                        <rect key="frame" x="0.0" y="252" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-zu-dzo">
+                                        <rect key="frame" x="0.0" y="294" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date to Fertilize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-N5-pgE">
+                                        <rect key="frame" x="0.0" y="336" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date to Fertilize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-md-WqI">
+                                        <rect key="frame" x="0.0" y="378" width="181.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="pHQ-Qp-74v" secondAttribute="height" multiplier="361:500" id="8lD-WD-uhz"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eKb-YO-1fJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pHQ-Qp-74v" firstAttribute="centerY" secondItem="Fhf-7O-Ts2" secondAttribute="centerY" id="jdO-cT-EUT"/>
-                            <constraint firstItem="pHQ-Qp-74v" firstAttribute="centerX" secondItem="Fhf-7O-Ts2" secondAttribute="centerX" id="ofo-AL-ccI"/>
+                            <constraint firstItem="adb-mT-ghK" firstAttribute="centerX" secondItem="Fhf-7O-Ts2" secondAttribute="centerX" id="3ES-pk-ovT"/>
+                            <constraint firstItem="adb-mT-ghK" firstAttribute="centerY" secondItem="Fhf-7O-Ts2" secondAttribute="centerY" id="AQd-AR-vpf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Bs6-6K-KQS">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="G3Z-W5-gZs">
                             <connections>
                                 <action selector="edit:" destination="DvS-0V-jjs" id="WCM-7g-U2v"/>
+                                <segue destination="wu5-0d-K8h" kind="presentation" identifier="editPlant" id="alj-5P-axk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="Wvq-IH-51R" id="Kxu-8M-UJZ"/>
-                        <outlet property="location" destination="8Qp-JY-Btg" id="jUQ-2T-gSq"/>
-                        <outlet property="picker" destination="OhC-hU-Cqs" id="eqN-Lw-n2g"/>
-                        <outlet property="plant" destination="MOP-ig-8Ib" id="XeD-aM-6hh"/>
+                        <outlet property="fertilizeDate" destination="5c9-md-WqI" id="Ung-tR-fcq"/>
+                        <outlet property="location" destination="BNI-Lw-8wZ" id="VRI-On-osi"/>
+                        <outlet property="name" destination="RQu-md-OC2" id="Tjk-59-gYI"/>
+                        <outlet property="type" destination="j7a-Dd-5NU" id="MVi-b6-XjQ"/>
+                        <outlet property="waterDay" destination="ih2-zu-dzo" id="z5C-WI-3BH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-kb-p2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2355" y="335"/>
+            <point key="canvasLocation" x="3263.7681159420295" y="334.82142857142856"/>
         </scene>
         <!--Add Plant View Controller-->
         <scene sceneID="h01-rO-ANH">
@@ -355,144 +398,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtZ-k7-lIp">
-                                <rect key="frame" x="13.5" y="305.5" width="387" height="231"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-Vz-0lD">
+                                <rect key="frame" x="59.5" y="117" width="295" height="608.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="dNu-zD-VBf">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="45"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="plant_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0f9-yM-Hku">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="45" id="ci9-Qq-UsD"/>
-                                                    <constraint firstAttribute="height" constant="45" id="psU-jE-IHW"/>
-                                                </constraints>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLO-Bg-cJi">
-                                                <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="YLO-Bg-cJi" secondAttribute="height" multiplier="59:9" id="C1f-tg-cWu"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="w7O-dG-mHF">
-                                        <rect key="frame" x="0.0" y="62" width="361" height="45"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-BH-y8n">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="t4x-N1-cEg"/>
-                                                    <constraint firstAttribute="width" constant="45" id="x0o-Kj-IRD"/>
-                                                </constraints>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZ0-O2-Thi">
-                                                <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="jZ0-O2-Thi" secondAttribute="height" multiplier="59:9" id="IKR-4S-ud2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jDb-VU-bmc">
-                                        <rect key="frame" x="0.0" y="124" width="361" height="45"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="water_icon" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-nR-Scc">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="SZb-kR-8tm"/>
-                                                    <constraint firstAttribute="width" constant="45" id="rsB-e3-WNW"/>
-                                                </constraints>
-                                            </imageView>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkA-pc-pXP">
-                                                <rect key="frame" x="66" y="0.0" width="295" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="NkA-pc-pXP" secondAttribute="height" multiplier="59:9" id="0D1-W1-HEC"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="font" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="PZj-sh-Fuy" id="HuN-ly-Jjp"/>
-                                                    <outlet property="delegate" destination="PZj-sh-Fuy" id="aLt-0L-LK6"/>
-                                                </connections>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-YS-o8j">
-                                        <rect key="frame" x="0.0" y="186" width="387" height="45"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="fertilize" translatesAutoresizingMaskIntoConstraints="NO" id="6Mr-bc-FuE">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="kEM-WP-sT6"/>
-                                                    <constraint firstAttribute="width" constant="45" id="mqO-qN-MzP"/>
-                                                </constraints>
-                                            </imageView>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="8p5-Jm-AOh">
-                                                <rect key="frame" x="67" y="0.0" width="320" height="45"/>
-                                            </datePicker>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Plant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iU-B8-S8J">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="8p5-Jm-AOh" secondAttribute="trailing" id="SJW-F9-A7G"/>
+                                            <constraint firstAttribute="width" constant="295" id="dQV-24-EBf"/>
                                         </constraints>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s85-op-eyV">
+                                        <rect key="frame" x="0.0" y="44" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="HRb-7B-z2u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type of Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-7S-0m1">
+                                        <rect key="frame" x="0.0" y="92" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="c2L-jj-WRH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zH-vo-34f">
+                                        <rect key="frame" x="0.0" y="140" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="a0X-hA-0NR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-rH-5LW">
+                                        <rect key="frame" x="0.0" y="188" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="pNV-py-5rl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="7ao-fh-mAr">
+                                        <rect key="frame" x="0.0" y="232" width="295" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="hbA-XE-WK5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="font" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="PZj-sh-Fuy" id="dxe-r5-gwX"/>
+                                            <outlet property="delegate" destination="PZj-sh-Fuy" id="vV3-2D-Yvb"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date to Fertilize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vja-PN-9kD">
+                                        <rect key="frame" x="0.0" y="462" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="6hX-H7-zDL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-YX-JB6">
+                                        <rect key="frame" x="0.0" y="506" width="295" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="kLU-p7-KVz"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBm-O3-7Zt">
+                                        <rect key="frame" x="106.5" y="572" width="82" height="36.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sBm-O3-7Zt" secondAttribute="height" multiplier="83:37" id="5OZ-0g-0yZ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <fontDescription key="titleFontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="azA-Ig-1nd" kind="unwind" identifier="savesegue" unwindAction="myUnwindActionWithUnwindSegue:" id="g3U-jA-bMz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="TtZ-k7-lIp" secondAttribute="height" multiplier="129:77" id="AH8-WJ-QNm"/>
-                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iU-B8-S8J">
-                                <rect key="frame" x="122.5" y="246" width="169.5" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4iU-B8-S8J" secondAttribute="height" multiplier="169:30" id="VQN-bq-cI4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBm-O3-7Zt">
-                                <rect key="frame" x="166" y="563" width="82" height="36.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="sBm-O3-7Zt" secondAttribute="height" multiplier="83:37" id="5OZ-0g-0yZ"/>
-                                </constraints>
-                                <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save">
-                                    <fontDescription key="titleFontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="azA-Ig-1nd" kind="unwind" identifier="savesegue" unwindAction="myUnwindActionWithUnwindSegue:" id="g3U-jA-bMz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nYh-mb-OaK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4iU-B8-S8J" firstAttribute="centerX" secondItem="hBQ-G0-O9X" secondAttribute="centerX" id="9wE-6P-W4y"/>
-                            <constraint firstItem="TtZ-k7-lIp" firstAttribute="top" secondItem="4iU-B8-S8J" secondAttribute="bottom" constant="29.5" id="U23-HY-POt"/>
-                            <constraint firstItem="sBm-O3-7Zt" firstAttribute="top" secondItem="TtZ-k7-lIp" secondAttribute="bottom" constant="26.5" id="YGa-n4-43r"/>
-                            <constraint firstItem="TtZ-k7-lIp" firstAttribute="centerY" secondItem="hBQ-G0-O9X" secondAttribute="centerY" id="cXG-Ue-yCI"/>
-                            <constraint firstItem="TtZ-k7-lIp" firstAttribute="centerX" secondItem="hBQ-G0-O9X" secondAttribute="centerX" id="ePp-NA-JZD"/>
-                            <constraint firstItem="sBm-O3-7Zt" firstAttribute="centerX" secondItem="hBQ-G0-O9X" secondAttribute="centerX" id="yPp-16-ZsZ"/>
+                            <constraint firstItem="L2s-Vz-0lD" firstAttribute="centerX" secondItem="hBQ-G0-O9X" secondAttribute="centerX" id="0n8-DP-hQA"/>
+                            <constraint firstItem="L2s-Vz-0lD" firstAttribute="centerY" secondItem="hBQ-G0-O9X" secondAttribute="centerY" id="NnS-Fr-MCJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="8p5-Jm-AOh" id="J9A-09-X23"/>
-                        <outlet property="locationTextField" destination="jZ0-O2-Thi" id="WVH-tX-Vkz"/>
-                        <outlet property="nameTextField" destination="YLO-Bg-cJi" id="nrw-RN-WFC"/>
-                        <outlet property="picker" destination="NkA-pc-pXP" id="qb6-90-lmE"/>
+                        <outlet property="datePicker" destination="pcv-YX-JB6" id="jgT-om-kdf"/>
+                        <outlet property="locationTextField" destination="7zH-vo-34f" id="9Sl-QB-k91"/>
+                        <outlet property="nameTextField" destination="s85-op-eyV" id="jUu-SX-dE2"/>
+                        <outlet property="picker" destination="7ao-fh-mAr" id="wSO-G1-ZXw"/>
                         <outlet property="saveButton" destination="sBm-O3-7Zt" id="gTi-vg-zjP"/>
+                        <outlet property="typeTextField" destination="6UF-7S-0m1" id="hfJ-Sw-qb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcX-0L-m2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="azA-Ig-1nd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="1082"/>
+            <point key="canvasLocation" x="2476.811594202899" y="1081.4732142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GQ8-CU-vQI">
@@ -550,23 +565,164 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFG-LA-Ltx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.79710144927537" y="335.49107142857139"/>
+            <point key="canvasLocation" x="1515.9420289855075" y="334.82142857142856"/>
+        </scene>
+        <!--Edit Plant View Controller-->
+        <scene sceneID="Oxt-9b-zd4">
+            <objects>
+                <viewController id="wu5-0d-K8h" customClass="EditPlantViewController" customModule="Happy_Plant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="srW-Tt-dLa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="u2T-y1-bMW">
+                                <rect key="frame" x="59.5" y="117" width="295" height="608.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Plant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H1-m1-Ypo">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="n5h-UZ-EbM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXe-24-Wtt">
+                                        <rect key="frame" x="0.0" y="44" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="kq0-It-Wkv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type of Plant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGC-cZ-w8a">
+                                        <rect key="frame" x="0.0" y="92" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="9Zr-12-YN8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5B-zU-HBO">
+                                        <rect key="frame" x="0.0" y="140" width="295" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="RQF-be-szJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl8-dd-0Mj">
+                                        <rect key="frame" x="0.0" y="188" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="FHt-vT-N1q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="30i-mX-hot">
+                                        <rect key="frame" x="0.0" y="232" width="295" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="xPf-xG-Zya"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="font" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="wu5-0d-K8h" id="Fjl-qx-h1x"/>
+                                            <outlet property="delegate" destination="wu5-0d-K8h" id="qnY-su-tvI"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date to Fertilize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0h-IN-VgG">
+                                        <rect key="frame" x="0.0" y="462" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="zUT-AQ-YD1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="GOS-po-P4a">
+                                        <rect key="frame" x="0.0" y="506" width="295" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="295" id="E8y-Ux-CY0"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mB-cx-9Kn">
+                                        <rect key="frame" x="106.5" y="572" width="82" height="36.5"/>
+                                        <color key="backgroundColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1mB-cx-9Kn" secondAttribute="height" multiplier="83:37" id="kbN-EE-euP"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <fontDescription key="titleFontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="save:" destination="wu5-0d-K8h" eventType="touchUpInside" id="PaO-kt-8OT"/>
+                                            <segue destination="X1W-9V-w6M" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="QQH-3Y-T9H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5vE-mJ-rgo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="u2T-y1-bMW" firstAttribute="centerX" secondItem="srW-Tt-dLa" secondAttribute="centerX" id="bf5-Yw-W3S"/>
+                            <constraint firstItem="u2T-y1-bMW" firstAttribute="centerY" secondItem="srW-Tt-dLa" secondAttribute="centerY" id="uNL-Me-acW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zX5-M6-fhM"/>
+                    <connections>
+                        <outlet property="datePicker" destination="GOS-po-P4a" id="cpQ-ED-1V3"/>
+                        <outlet property="locationTextField" destination="s5B-zU-HBO" id="B2C-j8-8qG"/>
+                        <outlet property="nameTextField" destination="WXe-24-Wtt" id="uDx-6U-cxw"/>
+                        <outlet property="saveButton" destination="1mB-cx-9Kn" id="EHv-DB-6QR"/>
+                        <outlet property="typeTextField" destination="oGC-cZ-w8a" id="C6K-Rz-Dg6"/>
+                        <outlet property="waterDayPicker" destination="30i-mX-hot" id="cFC-UF-q8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2z-5m-fHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="X1W-9V-w6M" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3455.072463768116" y="1095.5357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5mq-un-yex">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HM4-3d-YoN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bandaid_tab" selectedImage="selected_bandaid_tab" id="Rla-a6-rbY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7u-EM-hFf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.6598351335" green="0.72718697789999998" blue="0.64145070380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nnZ-jN-8Q1" kind="relationship" relationship="rootViewController" id="znk-ZS-2nJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKO-F5-xay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1657.9710144927537" y="676.33928571428567"/>
         </scene>
     </scenes>
     <resources>
-        <image name="628324" width="512" height="512"/>
         <image name="bandaid_tab" width="36" height="36"/>
-        <image name="fertilize" width="512" height="512"/>
         <image name="home_tab" width="38" height="36"/>
-        <image name="location_icon" width="512" height="512"/>
-        <image name="plant_icon" width="512" height="512"/>
         <image name="plant_tab" width="31" height="38"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="selected_bandaid_tab" width="36" height="36"/>
         <image name="selected_home_tab" width="38" height="36"/>
         <image name="selected_plant_tab" width="31" height="38"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
-        <image name="water_icon" width="512" height="512"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

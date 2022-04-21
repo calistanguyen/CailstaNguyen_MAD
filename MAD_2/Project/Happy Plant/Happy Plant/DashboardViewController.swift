@@ -64,9 +64,8 @@ class DashboardViewController: UIViewController, UICollectionViewDataSource, UIC
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, yyyy"
         fertilizedPlants = [Plant]()
-        print("DATE TODAY: " + dateFormatter.string(from: date))
+        
         for i in plantData {
-
             if(i.dayToFertilize == dateFormatter.string(from: date)) {
                 fertilizedPlants.append(i);
             }

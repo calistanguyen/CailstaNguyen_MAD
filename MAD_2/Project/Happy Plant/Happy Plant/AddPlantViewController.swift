@@ -11,6 +11,7 @@ class AddPlantViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,6 +20,7 @@ class AddPlantViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var addedName = String()
     var addedLocation = String()
     var addedWaterDay = "Monday"
+    var addedType = String()
     var addedFertilizeDate = String()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -53,12 +55,14 @@ class AddPlantViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         nameTextField.addTarget(self, action: #selector(AddPlantViewController.textFieldDidChange(_:)), for: .editingChanged)
         locationTextField.addTarget(self, action: #selector(AddPlantViewController.textFieldDidChange(_:)), for: .editingChanged)
+        datePicker.semanticContentAttribute = .forceRightToLeft
+        datePicker.subviews.first?.semanticContentAttribute = .forceRightToLeft
         // Do any additional setup after loading the view.
     }
     
     //https://stackoverflow.com/questions/28394933/how-do-i-check-when-a-uitextfield-changes
     @objc func textFieldDidChange(_ textField: UITextField) {
-        if(nameTextField.text == "" || locationTextField.text == ""){
+        if(nameTextField.text == "" || locationTextField.text == "" || typeTextField.text == ""){
             saveButton.isEnabled = false
         }else {
             saveButton.isEnabled = true
@@ -72,7 +76,7 @@ class AddPlantViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             let dateFormatter = DateFormatter();
             dateFormatter.dateFormat = "MMMM dd, yyyy"
             addedFertilizeDate = dateFormatter.string(from: datePicker.date)
-            
+            addedType = typeTextField.text!
         }
     }
 

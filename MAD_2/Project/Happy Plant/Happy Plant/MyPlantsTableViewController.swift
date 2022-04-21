@@ -15,10 +15,16 @@ class MyPlantsTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        getData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getData()
     }
     
     func getData(){
+        print("LOADING TABLEVIEW")
         Task {
             await dataHandler.getFirebaseData()
             plants = dataHandler.getPlants()
@@ -49,16 +55,25 @@ class MyPlantsTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: delete
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            dataHandler.deletePlant(id: plants[indexPath.row].id!)
+            plants.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData();
+        }
+    }
+    
+    
     //MARK: prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPlantDetails"{
             if let plantDetailVC = segue.destination as? PlantDetailsViewController {
                 if let indexPath = tableView.indexPath(for: (sender as? UITableViewCell)!) {
-                    plantDetailVC.title = plants[indexPath.row].name
-                    plantDetailVC.dateValue = plants[indexPath.row].dayToFertilize
-                    plantDetailVC.locationValue = plants[indexPath.row].location
-                    plantDetailVC.pickerValue = plants[indexPath.row].waterDay
-                    plantDetailVC.plantValue = plants[indexPath.row].name
+                    plantDetailVC.plant = plants[indexPath.row]
                 }
             }
         }
@@ -68,9 +83,10 @@ class MyPlantsTableViewController: UITableViewController {
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
         if unwindSegue.identifier == "savesegue" {
             let source = unwindSegue.source as! AddPlantViewController
-            dataHandler.addPlants(source.addedName, source.addedLocation, source.addedWaterDay, source.addedFertilizeDate)
+            dataHandler.addPlants(source.addedName, source.addedType, source.addedLocation, source.addedWaterDay, source.addedFertilizeDate)
             getData()
         }
+    
     }
 
 }

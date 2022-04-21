@@ -12,6 +12,8 @@
 		732AC55127D84ABC0091AF9B /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 732AC54C27D84ABC0091AF9B /* Quicksand-SemiBold.ttf */; };
 		732AC55227D84ABC0091AF9B /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 732AC54D27D84ABC0091AF9B /* Quicksand-Regular.ttf */; };
 		732AC55327D84ABC0091AF9B /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 732AC54E27D84ABC0091AF9B /* Quicksand-Light.ttf */; };
+		7334F23528110CB500E209C9 /* ProblemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334F23428110CB500E209C9 /* ProblemsTableViewController.swift */; };
+		7334F2372811169F00E209C9 /* ProblemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334F2362811169E00E209C9 /* ProblemDetailsViewController.swift */; };
 		733F6D0427E2EBAE00BD7375 /* MyPlantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */; };
 		733F6D0627E3032F00BD7375 /* PlantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */; };
 		733F6D0827E30D1900BD7375 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 733F6D0727E30D1900BD7375 /* GoogleService-Info.plist */; };
@@ -28,6 +30,7 @@
 		7388A19C27DA659E0069A59D /* plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7388A19B27DA659E0069A59D /* plant.swift */; };
 		7388A1A127DA93F20069A59D /* WaterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7388A19F27DA93F20069A59D /* WaterCollectionViewCell.swift */; };
 		7388A1A327DA97870069A59D /* WaterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7388A1A027DA93F20069A59D /* WaterCollectionViewCell.xib */; };
+		73A9EE0F280F09F100727A24 /* EditPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9EE0E280F09F100727A24 /* EditPlantViewController.swift */; };
 		73F7B2CB27DAB295003B74B5 /* FertilizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7B2C927DAB295003B74B5 /* FertilizeCollectionViewCell.swift */; };
 		73F7B2CC27DAB295003B74B5 /* FertilizeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F7B2CA27DAB295003B74B5 /* FertilizeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,8 @@
 		732AC54C27D84ABC0091AF9B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		732AC54D27D84ABC0091AF9B /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		732AC54E27D84ABC0091AF9B /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		7334F23428110CB500E209C9 /* ProblemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsTableViewController.swift; sourceTree = "<group>"; };
+		7334F2362811169E00E209C9 /* ProblemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDetailsViewController.swift; sourceTree = "<group>"; };
 		733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsTableViewController.swift; sourceTree = "<group>"; };
 		733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsViewController.swift; sourceTree = "<group>"; };
 		733F6D0727E30D1900BD7375 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		7388A19B27DA659E0069A59D /* plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plant.swift; sourceTree = "<group>"; };
 		7388A19F27DA93F20069A59D /* WaterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCollectionViewCell.swift; sourceTree = "<group>"; };
 		7388A1A027DA93F20069A59D /* WaterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterCollectionViewCell.xib; sourceTree = "<group>"; };
+		73A9EE0E280F09F100727A24 /* EditPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantViewController.swift; sourceTree = "<group>"; };
 		73F7B2C927DAB295003B74B5 /* FertilizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FertilizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		73F7B2CA27DAB295003B74B5 /* FertilizeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FertilizeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +140,9 @@
 				733F6D0327E2EBAE00BD7375 /* MyPlantsTableViewController.swift */,
 				733F6D0527E3032F00BD7375 /* PlantDetailsViewController.swift */,
 				73445D1627F293AC006D99C3 /* AddPlantViewController.swift */,
+				73A9EE0E280F09F100727A24 /* EditPlantViewController.swift */,
+				7334F23428110CB500E209C9 /* ProblemsTableViewController.swift */,
+				7334F2362811169E00E209C9 /* ProblemDetailsViewController.swift */,
 			);
 			name = view_controllers;
 			sourceTree = "<group>";
@@ -238,9 +247,12 @@
 				7367057527CE7F8F000922C5 /* AppDelegate.swift in Sources */,
 				7388A1A127DA93F20069A59D /* WaterCollectionViewCell.swift in Sources */,
 				7388A19C27DA659E0069A59D /* plant.swift in Sources */,
+				7334F2372811169F00E209C9 /* ProblemDetailsViewController.swift in Sources */,
 				73F7B2CB27DAB295003B74B5 /* FertilizeCollectionViewCell.swift in Sources */,
+				7334F23528110CB500E209C9 /* ProblemsTableViewController.swift in Sources */,
 				73445D1527F15689006D99C3 /* DataHandler.swift in Sources */,
 				733F6D0427E2EBAE00BD7375 /* MyPlantsTableViewController.swift in Sources */,
+				73A9EE0F280F09F100727A24 /* EditPlantViewController.swift in Sources */,
 				7388A19A27DA64A20069A59D /* DashboardViewController.swift in Sources */,
 				733F6D0627E3032F00BD7375 /* PlantDetailsViewController.swift in Sources */,
 				7367057727CE7F8F000922C5 /* SceneDelegate.swift in Sources */,

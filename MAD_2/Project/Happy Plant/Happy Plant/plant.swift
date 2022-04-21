@@ -11,6 +11,7 @@ import FirebaseFirestoreSwift
 struct Plant: Codable,Identifiable {
     @DocumentID var id: String?
     var name: String
+    var type: String
     var location: String
     var waterDay: String
     var dayToFertilize: String
